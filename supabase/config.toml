@@ -82,4 +82,4 @@ vector_port = 54328
 backend = "postgres"
 
 [functions]
-verify_jwt = true
+verify_jwt = { enabled = true }
