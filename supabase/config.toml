@@ -26,6 +26,10 @@ pool_mode = "transaction"
 default_pool_size = 20
 max_client_conn = 100
 
+[db.migrations]
+enabled = true
+schema = "public"
+
 [realtime]
 enabled = true
 # realtime.max_event_size = 1024 # bytes
