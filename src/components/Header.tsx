@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../lib/auth-context'
 import { supabase } from '../lib/supabase'
+import type { User } from '@supabase/supabase-js'
 
 const NAV_LINKS = [
   { to: '/', label: 'Inicio' },
@@ -11,11 +13,29 @@ const NAV_LINKS = [
   { to: '/', label: 'Simulador' },
 ]
 
+function getInitials(user: User): string {
+  const fullName = user.user_metadata?.full_name as string | undefined
+  if (fullName) {
+    const parts = fullName.trim().split(/\s+/)
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+    }
+    return parts[0][0]?.toUpperCase() ?? 'U'
+  }
+  return user.email?.[0]?.toUpperCase() ?? 'U'
+}
+
 export function Header() {
-  const { user, loading } = useAuth()
+  const { user, loading, toast } = useAuth()
+  const [logoutError, setLogoutError] = useState<string | null>(null)
 
   async function handleLogout() {
-    await supabase.auth.signOut()
+    try {
+      setLogoutError(null)
+      await supabase.auth.signOut()
+    } catch {
+      setLogoutError('No se pudo cerrar sesión')
+    }
   }
 
   return (
@@ -57,18 +77,20 @@ export function Header() {
           {!loading && user && (
             <>
               <span className="user-chip" title={user.email ?? ''}>
-                {(user.user_metadata?.full_name ||
-                  user.email ||
-                  'U')
-                  .toString()
-                  .slice(0, 1)
-                  .toUpperCase()}
+                {getInitials(user)}
               </span>
-              <button type="button" className="btn btn-ghost btn-sm" onClick={handleLogout}>
-                Salir
+              <button
+                type="button"
+                className="btn btn-ghost btn-sm logout-btn"
+                onClick={handleLogout}
+                title="Cerrar sesión"
+              >
+                <span className="material-symbols-outlined">logout</span>
               </button>
+              {logoutError && <span className="error-text">{logoutError}</span>}
             </>
           )}
+          {toast && <div className="toast-success">{toast}</div>}
         </div>
       </div>
     </header>

@@ -5,12 +5,16 @@ export interface AuthState {
   session: Session | null
   user: User | null
   loading: boolean
+  toast: string | null
+  showToast: (message: string) => void
 }
 
 export const AuthContext = createContext<AuthState>({
   session: null,
   user: null,
   loading: true,
+  toast: null,
+  showToast: () => {},
 })
 
 export function useAuth() {

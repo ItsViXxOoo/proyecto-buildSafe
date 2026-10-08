@@ -1,4 +1,4 @@
-import { useMemo, useState, type FormEvent } from 'react'
+import { useMemo, useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { authErrorMessage } from '../lib/authErrors'
@@ -17,6 +17,7 @@ const SCORE_LABELS = ['', 'Débil', 'Regular', 'Buena', 'Fuerte']
 
 export function RegisterPage() {
   const navigate = useNavigate()
+  const errorRef = useRef<HTMLDivElement>(null)
   const [username, setUsername] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -32,11 +33,17 @@ export function RegisterPage() {
 
   function validate(): string | null {
     const u = username.trim()
-    if (!/^[a-z0-9_]{3,30}$/.test(u)) {
-      return 'El username debe tener entre 3 y 30 caracteres (minúsculas, números o guiones bajos).'
+    if (!/^[a-zA-Z0-9_]{3,30}$/.test(u)) {
+      return 'El username debe tener entre 3 y 30 caracteres (letras, números o guiones bajos).'
     }
     if (!firstName.trim() || !lastName.trim()) {
       return 'Completá tu nombre y apellido.'
+    }
+    if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(firstName.trim())) {
+      return 'El nombre solo puede contener letras.'
+    }
+    if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(lastName.trim())) {
+      return 'El apellido solo puede contener letras.'
     }
     if (!birthDate) {
       return 'Ingresá tu fecha de nacimiento.'
@@ -44,8 +51,8 @@ export function RegisterPage() {
     if (new Date(birthDate) >= new Date(new Date().toDateString())) {
       return 'La fecha de nacimiento debe ser anterior a hoy.'
     }
-    if (password.length < 8) {
-      return 'La contraseña debe tener al menos 8 caracteres.'
+    if (!password) {
+      return 'Ingresá una contraseña.'
     }
     if (!email.trim()) {
       return 'Ingresá tu email.'
@@ -61,6 +68,9 @@ export function RegisterPage() {
     const validationError = validate()
     if (validationError) {
       setError(validationError)
+      setTimeout(() => {
+        errorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 100)
       return
     }
 
@@ -116,7 +126,7 @@ export function RegisterPage() {
           <p>Únete a BuildSafe para planificar tu próxima PC.</p>
         </div>
 
-        {error && <div className="form-error">{error}</div>}
+        {error && <div ref={errorRef} className="form-error">{error}</div>}
         {success && <div className="form-success">{success}</div>}
 
         <form onSubmit={handleSubmit} noValidate>
@@ -132,8 +142,7 @@ export function RegisterPage() {
               onChange={(e) => setUsername(e.target.value)}
             />
             <p className="helper">
-              Entre 3 y 30 caracteres. Solo letras minúsculas, números y guiones
-              bajos.
+              Entre 3 y 30 caracteres. Letras, números y guiones bajos.
             </p>
           </div>
 

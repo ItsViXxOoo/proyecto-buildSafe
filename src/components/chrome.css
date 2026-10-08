@@ -86,6 +86,55 @@
   font-weight: 600;
 }
 
+.logout-btn {
+  color: #dc2626 !important;
+}
+
+.logout-btn .material-symbols-outlined {
+  color: #dc2626;
+  font-size: 20px;
+}
+
+.logout-btn:hover {
+  background: rgba(220, 38, 38, 0.1);
+}
+
+.success-text {
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.toast-success {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: #16a34a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .site-footer {
   border-top: 1px solid var(--color-border);
   background: var(--color-surface-card);

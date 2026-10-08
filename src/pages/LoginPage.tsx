@@ -1,16 +1,21 @@
-import { useState, type FormEvent } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useRef, useState, type FormEvent } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { authErrorMessage } from '../lib/authErrors'
+import { useAuth } from '../lib/auth-context'
 
 export function LoginPage() {
   const navigate = useNavigate()
+  const location = useLocation()
+  const { showToast } = useAuth()
+  const errorRef = useRef<HTMLDivElement>(null)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [remember, setRemember] = useState(true)
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+
+  const from = (location.state as { from?: string })?.from ?? '/'
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -23,9 +28,13 @@ export function LoginPage() {
     setLoading(false)
     if (err) {
       setError(authErrorMessage(err))
+      setTimeout(() => {
+        errorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 100)
       return
     }
-    navigate('/')
+    showToast('Sesión iniciada correctamente')
+    navigate(from, { replace: true })
   }
 
   return (
@@ -39,7 +48,7 @@ export function LoginPage() {
           <p>Accedé a tus proyectos y configuraciones guardadas.</p>
         </div>
 
-        {error && <div className="form-error">{error}</div>}
+        {error && <div ref={errorRef} className="form-error">{error}</div>}
 
         <form onSubmit={handleSubmit} noValidate>
           <div className="field">
@@ -79,15 +88,6 @@ export function LoginPage() {
               </button>
             </div>
           </div>
-
-          <label className="checkbox-row">
-            <input
-              type="checkbox"
-              checked={remember}
-              onChange={(e) => setRemember(e.target.checked)}
-            />
-            Recordarme en este dispositivo
-          </label>
 
           <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
             {loading ? 'Ingresando…' : 'Iniciar sesión'}

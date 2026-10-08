@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useState, type ReactNode } from 'react'
 import { supabase } from './supabase'
 import { AuthContext } from './auth-context'
 
@@ -7,6 +7,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     ReturnType<typeof supabase.auth.getSession>
   >['data']['session']>(null)
   const [loading, setLoading] = useState(true)
+  const [toast, setToast] = useState<string | null>(null)
+
+  const showToast = useCallback((message: string) => {
+    setToast(message)
+    setTimeout(() => setToast(null), 3000)
+  }, [])
 
   useEffect(() => {
     let stale = false
@@ -33,7 +39,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <AuthContext.Provider
-      value={{ session, user: session?.user ?? null, loading }}
+      value={{ session, user: session?.user ?? null, loading, toast, showToast }}
     >
       {children}
     </AuthContext.Provider>

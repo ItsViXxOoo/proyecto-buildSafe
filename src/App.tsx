@@ -15,7 +15,16 @@ function Layout() {
   return (
     <>
       <Header />
-      <main>{loading ? null : <Outlet />}</main>
+      <main>
+        {loading ? (
+          <div className="loading-screen">
+            <span className="material-symbols-outlined">progress_activity</span>
+            <p>Cargando...</p>
+          </div>
+        ) : (
+          <Outlet />
+        )}
+      </main>
       <Footer />
     </>
   )
