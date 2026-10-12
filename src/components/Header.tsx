@@ -6,7 +6,7 @@ import type { User } from '@supabase/supabase-js'
 
 const NAV_LINKS = [
   { to: '/', label: 'Inicio' },
-  { to: '/', label: 'PC Builder' },
+  { to: '/builder', label: 'PC Builder' },
   { to: '/', label: 'Montajes' },
   { to: '/', label: 'Guías' },
   { to: '/', label: 'Comparador' },
