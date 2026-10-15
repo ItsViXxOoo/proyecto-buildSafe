@@ -1,0 +1,12 @@
+INSERT INTO components (name, brand, type_id, price_currency, specs, socket, form_factor, ram_type, chipset, capacity_gb, speed_mts, gpu_len_mm, psu_watts, tdp_w, interface, image_url, is_active) VALUES
+('ASUS PRIME B550M-A', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/92237/picture/?width=400&height=400', true),
+('Gigabyte B650E EAGLE WIFI6E', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/399042/picture/?width=400&height=400', true),
+('ASUS TUF GAMING A520M-PLUS WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/143221/picture/?width=400&height=400', true),
+('ASUS PRIME A620M-K', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/227843/picture/?width=400&height=400', true),
+('MSI B850 GAMING PLUS WIFI', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/265096/picture/?width=400&height=400', true),
+('ASRock B650M-HDV/M.2 White', 'ASRock', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/360691/picture/?width=400&height=400', true),
+('ASRock B450M-HDV R4.0', 'ASRock', 'b3e43ecf-2105-4275-aee1-2dda754862d7', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/58563/picture/?width=400&height=400', true),
+('Gigabyte B550M AORUS ELITE AX', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/214368/picture/?width=400&height=400', true),
+('Gigabyte B850 AORUS ELITE WIFI7 ICE', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/265493/picture/?width=400&height=400', true),
+('ASUS PRIME Z790-P WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/152175/picture/?width=400&height=400', true)
+ON CONFLICT (name, brand) DO NOTHING;

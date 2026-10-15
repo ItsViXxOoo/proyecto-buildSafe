@@ -1,0 +1,9 @@
+{
+  "completedCategories": [],
+  "allComponents": [],
+  "errors": [
+    "https://www.solotodo.cl/cpus: Error: Failed after 3 retries: https://www.solotodo.cl/cpus",
+    "https://www.solotodo.cl/videocards: Error: Failed after 3 retries: https://www.solotodo.cl/videocards",
+    "https://www.solotodo.cl/almacenamiento: Error: Failed after 3 retries: https://www.solotodo.cl/almacenamiento"
+  ]
+}

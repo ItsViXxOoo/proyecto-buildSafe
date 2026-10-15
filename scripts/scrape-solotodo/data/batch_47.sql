@@ -1,0 +1,12 @@
+INSERT INTO components (name, brand, type_id, price_currency, specs, socket, form_factor, ram_type, chipset, capacity_gb, speed_mts, gpu_len_mm, psu_watts, tdp_w, interface, image_url, is_active) VALUES
+('HP 200 GB (QR503A)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 200, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/399729/picture/?width=400&height=400', true),
+('HP 600 GB (613922-001)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 600, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/391050/picture/?width=400&height=400', true),
+('HP 1200 GB (840457-001)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 1200, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/399713/picture/?width=400&height=400', true),
+('IBM 900 GB (81Y9650)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 900, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/382707/picture/?width=400&height=400', true),
+('HP 600 GB (J9F42A)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 600, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/46341/picture/?width=400&height=400', true),
+('HP 146 GB (507283-001)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 146, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/382711/picture/?width=400&height=400', true),
+('HP 300 GB (P40430-B21)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 300, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/150695/picture/?width=400&height=400', true),
+('Hitachi 600 GB (B24481)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 600, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/400666/picture/?width=400&height=400', true),
+('HP 146 GB (432320-001)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 146, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/43887/picture/?width=400&height=400', true),
+('Hitachi Travelstar Z7K500 500 GB (HTS725050A7E630)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/33978/picture/?width=400&height=400', true)
+ON CONFLICT (name, brand) DO NOTHING;

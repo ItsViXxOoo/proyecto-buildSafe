@@ -1,0 +1,12 @@
+INSERT INTO components (name, brand, type_id, price_currency, specs, socket, form_factor, ram_type, chipset, capacity_gb, speed_mts, gpu_len_mm, psu_watts, tdp_w, interface, image_url, is_active) VALUES
+('ASUS ROG STRIX X870-A GAMING WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/257275/picture/?width=400&height=400', true),
+('ASUS PRIME A520M-A II/CSM', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/140058/picture/?width=400&height=400', true),
+('ASUS TUF GAMING Z790-PLUS WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/213359/picture/?width=400&height=400', true),
+('MSI B850M GAMING WIFI6E', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/381783/picture/?width=400&height=400', true),
+('ASRock A520M-HDV', 'ASRock', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/90499/picture/?width=400&height=400', true),
+('ASRock B550 EXTREME4', 'ASRock', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/86398/picture/?width=400&height=400', true),
+('MSI PRO X870E-P WIFI', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/363644/picture/?width=400&height=400', true),
+('ASUS B650M-AYW WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/278228/picture/?width=400&height=400', true),
+('ASUS PRIME H610M-F D4 R2.0', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/359108/picture/?width=400&height=400', true),
+('MSI X870E GAMING PLUS WIFI', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/358152/picture/?width=400&height=400', true)
+ON CONFLICT (name, brand) DO NOTHING;

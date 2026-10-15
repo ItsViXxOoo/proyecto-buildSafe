@@ -1,0 +1,12 @@
+INSERT INTO components (name, brand, type_id, price_currency, specs, socket, form_factor, ram_type, chipset, capacity_gb, speed_mts, gpu_len_mm, psu_watts, tdp_w, interface, image_url, is_active) VALUES
+('HP 2 TB (658079-B21)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 2048, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/8553/picture/?width=400&height=400', true),
+('Dell 600 GB (FPW68)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 600, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/382748/picture/?width=400&height=400', true),
+('Dell 1200 GB (400-ATJL)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 1200, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/55987/picture/?width=400&height=400', true),
+('Dell 2400 GB (400-AUQX)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 2400, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/390291/picture/?width=400&height=400', true),
+('EMC 300 GB (005050926)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 300, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/382738/picture/?width=400&height=400', true),
+('Dell 450 GB (XX517)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 450, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/403557/picture/?width=400&height=400', true),
+('Dell 1920 GB (Y2M2R)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 1920, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/382745/picture/?width=400&height=400', true),
+('IBM 300 GB (0B26015)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 300, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/382699/picture/?width=400&height=400', true),
+('Dell 1800 GB (0WRRF)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 1800, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/400667/picture/?width=400&height=400', true),
+('Dell 4 TB (1MVTT)', 'Unknown', '411b5ef9-bb7a-4f23-bc83-5d133bab93ad', 'USD', {}, NULL, NULL, NULL, NULL, 4096, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/400658/picture/?width=400&height=400', true)
+ON CONFLICT (name, brand) DO NOTHING;

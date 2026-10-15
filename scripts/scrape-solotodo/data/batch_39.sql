@@ -1,0 +1,12 @@
+INSERT INTO components (name, brand, type_id, price_currency, specs, socket, form_factor, ram_type, chipset, capacity_gb, speed_mts, gpu_len_mm, psu_watts, tdp_w, interface, image_url, is_active) VALUES
+('MSI A520M PRO', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/95775/picture/?width=400&height=400', true),
+('MSI PRO X870-P WIFI', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/256840/picture/?width=400&height=400', true),
+('ASUS ProArt X870E-CREATOR WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/257276/picture/?width=400&height=400', true),
+('ASRock B550 Phantom Gaming 4', 'ASRock', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/82746/picture/?width=400&height=400', true),
+('Gigabyte X870E AERO X3D DARK WOOD', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/395515/picture/?width=400&height=400', true),
+('ASUS ROG STRIX B860-F GAMING WIFI', 'ASUS', 'd30b5262-b9a3-4064-a250-6089e8f683de', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/266541/picture/?width=400&height=400', true),
+('ASRock B550M Pro4', 'ASRock', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/84344/picture/?width=400&height=400', true),
+('ASUS TUF GAMING B560M-PLUS WIFI', 'ASUS', 'd30b5262-b9a3-4064-a250-6089e8f683de', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/106027/picture/?width=400&height=400', true),
+('ASUS PRIME Z890-P WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/259230/picture/?width=400&height=400', true),
+('ASUS ROG STRIX B850-E GAMING WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/355311/picture/?width=400&height=400', true)
+ON CONFLICT (name, brand) DO NOTHING;

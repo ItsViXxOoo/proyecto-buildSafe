@@ -1,0 +1,12 @@
+INSERT INTO components (name, brand, type_id, price_currency, specs, socket, form_factor, ram_type, chipset, capacity_gb, speed_mts, gpu_len_mm, psu_watts, tdp_w, interface, image_url, is_active) VALUES
+('Gigabyte B550M K', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/198592/picture/?width=400&height=400', true),
+('Gigabyte B550 AORUS ELITE V2', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/89560/picture/?width=400&height=400', true),
+('MSI B550M-A PRO', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/94853/picture/?width=400&height=400', true),
+('Gigabyte B550 UD WIFI6E', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/406357/picture/?width=400&height=400', true),
+('ASUS TUF GAMING X870-PLUS WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/255490/picture/?width=400&height=400', true),
+('Gigabyte Z790 D DDR4', 'Gigabyte', '3645d297-0f28-4043-9ef2-c6ec2ad114a0', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/216810/picture/?width=400&height=400', true),
+('ASUS PRIME B760M-K D4', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/199951/picture/?width=400&height=400', true),
+('Gigabyte B650M D3HP AX', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/247205/picture/?width=400&height=400', true),
+('ASUS PRIME A520M-A II/CSM', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/140058/picture/?width=400&height=400', true),
+('ASUS PRIME B550M-A AC', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/95391/picture/?width=400&height=400', true)
+ON CONFLICT (name, brand) DO NOTHING;

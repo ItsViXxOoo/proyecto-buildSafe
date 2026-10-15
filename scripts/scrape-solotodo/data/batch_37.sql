@@ -1,0 +1,12 @@
+INSERT INTO components (name, brand, type_id, price_currency, specs, socket, form_factor, ram_type, chipset, capacity_gb, speed_mts, gpu_len_mm, psu_watts, tdp_w, interface, image_url, is_active) VALUES
+('MSI PRO B650M-B', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/256064/picture/?width=400&height=400', true),
+('Gigabyte B840M AORUS ELITE WIFI6E', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/270287/picture/?width=400&height=400', true),
+('MSI B840 GAMING PLUS WIFI', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/383566/picture/?width=400&height=400', true),
+('ASRock B850M Rock WIFI', 'ASRock', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/388680/picture/?width=400&height=400', true),
+('ASUS ROG STRIX B850-F GAMING WIFI', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/266485/picture/?width=400&height=400', true),
+('Gigabyte X870 AORUS ELITE WIFI7', 'Gigabyte', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/256616/picture/?width=400&height=400', true),
+('ASRock B850M Pro-A WiFi', 'ASRock', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/265093/picture/?width=400&height=400', true),
+('MSI PRO B850-S WIFI6E', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/368576/picture/?width=400&height=400', true),
+('MSI PRO B550M-B', 'MSI', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/407649/picture/?width=400&height=400', true),
+('ASUS TUF GAMING B850M-PLUS WIFI7', 'ASUS', 'd2b77fee-3386-433a-a19e-7fb6ada9fabb', 'USD', {}, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://api.solotodo.com/products/397733/picture/?width=400&height=400', true)
+ON CONFLICT (name, brand) DO NOTHING;
