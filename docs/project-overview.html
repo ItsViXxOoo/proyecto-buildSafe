@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BuildSafe - Documentación del Proyecto</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            color: #333;
+        }
+        h1 { color: #1a5f7a; border-bottom: 3px solid #1a5f7a; padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h3 { color: #34495e; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #1a5f7a; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+        .status-ok { color: #27ae60; font-weight: bold; }
+        .status-warn { color: #f39c12; font-weight: bold; }
+        .status-error { color: #e74c3c; font-weight: bold; }
+        .section { margin-bottom: 30px; }
+        .highlight { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 15px 0; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<h1>BuildSafe - Documentación del Proyecto</h1>
+
+<div class="section">
+<h2>1. Resumen Ejecutivo</h2>
+<p><strong>BuildSafe</strong> es una aplicación web para construir PCs personalizadas con recomendaciones inteligentes de componentes.</p>
+
+<table>
+<tr><th>Aspecto</th><th>Detalle</th></tr>
+<tr><td>Stack</td><td>React 19 + Vite + TypeScript + React Router v7</td></tr>
+<tr><td>Backend</td><td>Supabase (PostgreSQL + Auth + Storage + Realtime)</td></tr>
+<tr><td>Estado actual</td><td>MVP funcional con Builder Rápido implementado</td></tr>
+<tr><td>Base de datos</td><td>887 componentes cargados (scraping de solotodo.cl)</td></tr>
+<tr><td>Despliegue</td><td>Vercel (proyecto-build-safe.vercel.app)</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>2. Arquitectura</h2>
+
+<h3>Frontend</h3>
+<ul>
+<li><strong>React 19</strong> con <strong>TypeScript</strong> y <strong>Vite 8</strong> como build tool</li>
+<li><strong>React Router v7</strong> para navegación SPA</li>
+<li><strong>Supabase JS Client</strong> para conexión directa con backend</li>
+<li><strong>Context API</strong> para estado global (Auth + BuilderRápido)</li>
+<li><strong>Hooks personalizados</strong> para lógica de negocio (useComponents, useBuilds, useCompatibility)</li>
+</ul>
+
+<h3>Backend (Supabase)</h3>
+<ul>
+<li><strong>PostgreSQL 15</strong> con Row Level Security (RLS)</li>
+<li><strong>Auth</strong> con confirmación de email</li>
+<li><strong>Storage</strong> con 3 buckets: avatars, component-images, build-covers</li>
+<li><strong>Realtime</strong> habilitado para actualizaciones en vivo</li>
+<li><strong>Edge Functions</strong> listas para lógica serverless</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Base de Datos</h2>
+
+<h3>Tablas (8 tablas principales)</h3>
+<table>
+<tr><th>Tabla</th><th>Descripción</th><th>Datos actuales</th></tr>
+<tr><td>profiles</td><td>Perfiles de usuario 1:1 con auth.users</td><td>0 usuarios</td></tr>
+<tr><td>component_types</td><td>Catálogo de tipos (cpu, gpu, ram, etc.)</td><td>8 tipos</td></tr>
+<tr><td>components</td><td>Catálogo completo de componentes PC</td><td>887 registros</td></tr>
+<tr><td>price_history</td><td>Historial de precios por componente</td><td>Vacía</td></tr>
+<tr><td>builds</td><td>Builds creadas por usuarios</td><td>Vacía</td></tr>
+<tr><td>build_components</td><td>Componentes en cada build (N:M)</td><td>Vacía</td></tr>
+<tr><td>build_compatibility_results</td><td>Resultados de chequeo de compatibilidad</td><td>Vacía</td></tr>
+<tr><td>compatibility_rules</td><td>Reglas configurables de compatibilidad</td><td>6 reglas seed</td></tr>
+</table>
+
+<h3>Columnas de la tabla <code>components</code></h3>
+<table>
+<tr><th>Columna</th><th>Tipo</th><th>Descripción</th></tr>
+<tr><td>id</td><td>uuid PK</td><td>Identificador único</td></tr>
+<tr><td>type_id</td><td>uuid FK</td><td>Tipo de componente</td></tr>
+<tr><td>name</td><td>text</td><td>Nombre del componente</td></tr>
+<tr><td>brand</td><td>text</td><td>Marca</td></tr>
+<tr><td>image_url</td><td>text</td><td>URL de imagen</td></tr>
+<tr><td>socket</td><td>text</td><td>Socket (CPU)</td></tr>
+<tr><td>form_factor</td><td>text</td><td>Factor de forma (motherboard)</td></tr>
+<tr><td>ram_type</td><td>text</td><td>Tipo RAM (DDR3/DDR4/DDR5)</td></tr>
+<tr><td>chipset</td><td>text</td><td>Chipset (motherboard)</td></tr>
+<tr><td>capacity_gb</td><td>int</td><td>Capacidad (RAM/Storage)</td></tr>
+<tr><td>speed_mts</td><td>int</td><td>Velocidad (RAM)</td></tr>
+<tr><td>gpu_len_mm</td><td>int</td><td>Longitud GPU</td></tr>
+<tr><td>psu_watts</td><td>int</td><td>Potencia PSU</td></tr>
+<tr><td>tdp_w</td><td>int</td><td>Consumo TDP</td></tr>
+<tr><td>interface</td><td>text</td><td>Interfaz (storage)</td></tr>
+<tr><td>specs</td><td>jsonb</td><td>Especificaciones adicionales</td></tr>
+<tr><td>current_price</td><td>numeric(12,2)</td><td>Precio actual en USD</td></tr>
+<tr><td>is_active</td><td>boolean</td><td>Visible en la app</td></tr>
+</table>
+
+<h3>Reglas de compatibilidad (6 reglas seed)</h3>
+<table>
+<tr><th>Regla</th><th>Componentes</th><th>Condición</th></tr>
+<tr><td>Socket CPU-Motherboard</td><td>CPU ↔ Motherboard</td><td>socket eq</td></tr>
+<tr><td>Tipo RAM</td><td>RAM ↔ Motherboard</td><td>ram_type eq</td></tr>
+<tr><td>Factor de forma</td><td>Motherboard ↔ Case</td><td>form_factor in_array</td></tr>
+<tr><td>Longitud GPU</td><td>GPU ↔ Case</td><td>gpu_len_mm lte max_gpu_len_mm</td></tr>
+<tr><td>Altura Cooler</td><td>Cooler ↔ Case</td><td>cooler_height_mm lte max_cooler_height_mm</td></tr>
+<tr><td>Potencia PSU</td><td>PSU ↔ Build TDP</td><td>psu_watts gte sum(tdp_w)</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>4. Funcionalidad Implementada</h2>
+
+<h3>Builder Rápido (Wizard de 5 pasos)</h3>
+<table>
+<tr><th>Paso</th><th>Componente</th><th>Función</th></tr>
+<tr><td>1</td><td>PresupuestoStep</td><td>Slider $300-$5000 con quick picks</td></tr>
+<tr><td>2</td><td>UsoStep</td><td>Gaming, Oficina, Edición, Streaming</td></tr>
+<tr><td>3</td><td>ResolucionStep</td><td>1080p, 1440p, 4K</td></tr>
+<tr><td>4</td><td>DetallesStep</td><td>RGB, WiFi, Overclock, prioridad</td></tr>
+<tr><td>5</td><td>FinalizarStep</td><td>Recomendaciones + precio total</td></tr>
+</table>
+
+<h3>Distribución de presupuesto por uso</h3>
+<table>
+<tr><th>Uso</th><th>CPU</th><th>GPU</th><th>RAM</th><th>MB</th><th>Storage</th><th>PSU</th><th>Case</th></tr>
+<tr><td>Gaming</td><td>18%</td><td>35%</td><td>10%</td><td>12%</td><td>7%</td><td>8%</td><td>5%</td></tr>
+<tr><td>Oficina</td><td>25%</td><td>5%</td><td>20%</td><td>15%</td><td>15%</td><td>10%</td><td>5%</td></tr>
+<tr><td>Edición</td><td>25%</td><td>20%</td><td>20%</td><td>10%</td><td>15%</td><td>5%</td><td>5%</td></tr>
+<tr><td>Streaming</td><td>25%</td><td>25%</td><td>15%</td><td>12%</td><td>8%</td><td>8%</td><td>7%</td></tr>
+</table>
+
+<h3>Autenticación</h3>
+<ul>
+<li>Registro con validaciones (username, nombre, apellido, email, password)</li>
+<li>Login con email/password + mensajes de error traducidos</li>
+<li>Persistencia de sesión (localStorage)</li>
+<li>Redirección post-login con <code>useLocation</code></li>
+<li>Toast de feedback (login/logout)</li>
+</ul>
+
+<h3>CRUD Builds</h3>
+<ul>
+<li>Crear build con título y descripción</li>
+<li>Eliminar build</li>
+<li>Marcar como pública/privada</li>
+<li>Agregar componente a build</li>
+<li>Eliminar componente de build</li>
+<li>Chequear compatibilidad (checkOnly + check)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. Estado de Funcionalidades</h2>
+
+<table>
+<tr><th>Funcionalidad</th><th>Estado</th><th>Notas</th></tr>
+<tr><td><span class="status-ok">✓</span> Builder Rápido</td><td>Funcional</td><td>Recomendaciones basadas en DB real</td></tr>
+<tr><td><span class="status-ok">✓</span> Auth (registro/login)</td><td>Funcional</td><td>Sin OAuth</td></tr>
+<tr><td><span class="status-ok">✓</span> Validaciones formularios</td><td>Funcional</td><td>Username, nombre, email, password</td></tr>
+<tr><td><span class="status-ok">✓</span> Toast feedback</td><td>Funcional</td><td>Login/logout messages</td></tr>
+<tr><td><span class="status-ok">✓</span> Scroll a errores</td><td>Funcional</td><td>setTimeout + scrollIntoView</td></tr>
+<tr><td><span class="status-warn">⚠</span> Modo Avanzado</td><td>Placeholder</td><td>Ruta /builder-avanzado no existe</td></tr>
+<tr><td><span class="status-warn">⚠</span> OAuth Google/Apple</td><td>Deshabilitado</td><td>Botones presentes pero disabled</td></tr>
+<tr><td><span class="status-warn">⚠</span> Header links</td><td>Placeholder</td><td>5 de 6 links apuntan a /</td></tr>
+<tr><td><span class="status-warn">⚠</span> Footer links</td><td>Placeholder</td><td>Todos href="#"</td></tr>
+<tr><td><span class="status-warn">⚠</span> Precios</td><td>No implementado</td><td>solotodo.cl carga dinámica con JS</td></tr>
+<tr><td><span class="status-error">✗</span> Secciones principales</td><td>No implementadas</td><td>Montajes, Guías, Comparador, Simulador</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>6. Datos Actuales en DB</h2>
+<table>
+<tr><th>Categoría</th><th>Cantidad</th><th>Con imagen</th><th>Con precio</th></tr>
+<tr><td>CPU</td><td>120+</td><td>100%</td><td>0%</td></tr>
+<tr><td>GPU</td><td>100+</td><td>100%</td><td>0%</td></tr>
+<tr><td>RAM</td><td>100+</td><td>100%</td><td>0%</td></tr>
+<tr><td>Motherboard</td><td>100+</td><td>100%</td><td>0%</td></tr>
+<tr><td>Storage</td><td>100+</td><td>100%</td><td>0%</td></tr>
+<tr><td>PSU</td><td>100+</td><td>100%</td><td>0%</td></tr>
+<tr><td>Case</td><td>100+</td><td>100%</td><td>0%</td></tr>
+<tr><td>Cooler</td><td>100+</td><td>100%</td><td>0%</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>887</strong></td><td><strong>~100%</strong></td><td><strong>0%</strong></td></tr>
+</table>
+
+<div class="highlight">
+<strong>Nota:</strong> ~80 nombres duplicados (mismo producto con diferente marca asignada). Decisión: dejarlos por ahora.
+</div>
+</div>
+
+<div class="section">
+<h2>7. Ideas a Evaluar con DeepSeek</h2>
+
+<h3>Funcionalidades nuevas</h3>
+<ol>
+<li><strong>Modo Avanzado:</strong> ¿Qué componentes/interfaz debería tener?</li>
+<li><strong>Precios:</strong> ¿Cómo obtener precios reales sin scraping dinámico?</li>
+<li><strong>Secciones:</strong> ¿Qué priorizar? Montajes, Guías, Comparador, Simulador</li>
+<li><strong>Funcionalidades sociales:</strong> ¿Compartir builds, likes, comentarios?</li>
+<li><strong>Mejoras al recomendador:</strong> ¿Algoritmos de puntuación vs precio mínimo?</li>
+</ol>
+
+<h3>Preguntas técnicas</h3>
+<ol>
+<li>¿Edge Functions para actualización periódica de precios?</li>
+<li>¿Sistema de cache para componentes?</li>
+<li>¿Migración a Next.js para SSR/SEO?</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>8. Configuración del Proyecto</h2>
+
+<h3>Dependencias</h3>
+<table>
+<tr><th>Paquete</th><th>Versión</th><th>Propósito</th></tr>
+<tr><td>react</td><td>^19.2.8</td><td>Framework UI</td></tr>
+<tr><td>react-router-dom</td><td>^7.18.4</td><td>Routing</td></tr>
+<tr><td>@supabase/supabase-js</td><td>^2.117.0</td><td>Cliente Supabase</td></tr>
+<tr><td>vite</td><td>^8.3.0</td><td>Build tool</td></tr>
+<tr><td>typescript</td><td>~6.0.2</td><td>Tipado</td></tr>
+</table>
+
+<h3>Variables de entorno</h3>
+<ul>
+<li><code>VITE_SUPABASE_URL</code> - URL del proyecto Supabase</li>
+<li><code>VITE_SUPABASE_ANON_KEY</code> - Key pública (anon)</li>
+</ul>
+
+<h3>Scripts disponibles</h3>
+<ul>
+<li><code>npm run dev</code> - Desarrollo</li>
+<li><code>npm run build</code> - Producción</li>
+<li><code>npm run preview</code> - Preview producción</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>9. Repositorio y Despliegue</h2>
+<table>
+<tr><th>Aspecto</th><th>Valor</th></tr>
+<tr><td>GitHub</td><td>https://github.com/ItsViXxOoo/proyecto-buildSafe</td></tr>
+<tr><td>Rama principal</td><td>main</td></tr>
+<tr><td>Rama desarrollo</td><td>dev</td></tr>
+<tr><td>Vercel</td><td>https://proyecto-build-safe.vercel.app</td></tr>
+<tr><td>Supabase</td><td>svhtsrhfnilctqgrimaz.supabase.co</td></tr>
+</table>
+</div>
+
+</body>
+</html>
