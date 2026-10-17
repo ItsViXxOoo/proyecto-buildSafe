@@ -3,16 +3,43 @@ import type { ScrapedComponent } from './types.js'
 
 function extractPrice($: cheerio.CheerioAPI): number | null {
   let minPrice: number | null = null
-  $('div, span, p').each((_, el) => {
-    const text = $(el).text()
-    const match = text.match(/\$\s?(\d{1,3}(?:\.\d{3})*)/)
-    if (match) {
-      const price = parseInt(match[1].replace(/\./g, ''), 10)
-      if (!minPrice || price < minPrice) {
-        minPrice = price
+  // Buscar en elementos de ofertas/precios específicos de SoloTodo
+  const offerSelectors = [
+    '.offer-price',
+    '.product-offer',
+    '[class*="offer"]',
+    '[class*="price"]',
+    '.price-tag',
+    '.product-price'
+  ]
+  
+  for (const selector of offerSelectors) {
+    $(selector).each((_, el) => {
+      const text = $(el).text()
+      const match = text.match(/\$\s?(\d{1,3}(?:\.\d{3})*)/)
+      if (match) {
+        const price = parseInt(match[1].replace(/\./g, ''), 10)
+        if (!minPrice || price < minPrice) {
+          minPrice = price
+        }
       }
-    }
-  })
+    })
+  }
+  
+  // Fallback: buscar en cualquier elemento que contenga patrón de precio CLP
+  if (minPrice === null) {
+    $('div, span, p').each((_, el) => {
+      const text = $(el).text()
+      const match = text.match(/\$\s?(\d{1,3}(?:\.\d{3})*)/)
+      if (match) {
+        const price = parseInt(match[1].replace(/\./g, ''), 10)
+        if (!minPrice || price < minPrice) {
+          minPrice = price
+        }
+      }
+    })
+  }
+  
   return minPrice
 }
 
@@ -27,15 +54,37 @@ function extractImageUrl($: cheerio.CheerioAPI): string | null {
 
 function extractSpecs($: cheerio.CheerioAPI): Record<string, unknown> {
   const specs: Record<string, unknown> = {}
-  $('.specs table tr, .specifications table tr, .characteristics table tr').each(
-    (_, el) => {
+  // SoloTodo usa tablas con clases específicas para especificaciones
+  const specSelectors = [
+    '.specs table tr',
+    '.specifications table tr',
+    '.characteristics table tr',
+    '.specs-table tr',
+    '.specs tr',
+    '.spec-table tr'
+  ]
+  
+  for (const selector of specSelectors) {
+    $(selector).each((_, el) => {
       const key = $(el).find('th, td:first-child').text().trim()
       const value = $(el).find('td:last-child').text().trim()
       if (key && value) {
         specs[key] = value
       }
-    },
-  )
+    })
+  }
+  
+  // Fallback: buscar en cualquier tabla
+  if (Object.keys(specs).length === 0) {
+    $('table tr').each((_, el) => {
+      const key = $(el).find('th, td:first-child').text().trim()
+      const value = $(el).find('td:last-child').text().trim()
+      if (key && value) {
+        specs[key] = value
+      }
+    })
+  }
+  
   return specs
 }
 

@@ -100,9 +100,47 @@ async function scrapeCategory(
 }
 
 function extractPrice($: cheerio.CheerioAPI): number | null {
-  const priceText = $('.product-price, .price, [class*="price"]').first().text()
-  const match = priceText.replace(/[^\d.]/g, '').match(/[\d.]+/)
-  return match ? parseFloat(match[0]) : null
+  let minPrice: number | null = null
+  // Buscar precios en elementos con clases comunes de SoloTodo
+  const priceSelectors = [
+    '.product-price',
+    '.price',
+    '[class*="price"]',
+    '[class*="Price"]',
+    '.offer-price',
+    '.product-offer',
+    '[class*="offer"]',
+    '.price-tag'
+  ]
+  
+  for (const selector of priceSelectors) {
+    $(selector).each((_, el) => {
+      const text = $(el).text()
+      const match = text.match(/\$\s?(\d{1,3}(?:\.\d{3})*)/)
+      if (match) {
+        const price = parseInt(match[1].replace(/\./g, ''), 10)
+        if (!minPrice || price < minPrice) {
+          minPrice = price
+        }
+      }
+    })
+  }
+  
+  // Fallback: buscar en cualquier elemento que contenga patrón de precio CLP
+  if (minPrice === null) {
+    $('div, span, p').each((_, el) => {
+      const text = $(el).text()
+      const match = text.match(/\$\s?(\d{1,3}(?:\.\d{3})*)/)
+      if (match) {
+        const price = parseInt(match[1].replace(/\./g, ''), 10)
+        if (!minPrice || price < minPrice) {
+          minPrice = price
+        }
+      }
+    })
+  }
+  
+  return minPrice
 }
 
 function loadProgress(): { completedCategories: string[]; allComponents: ScrapedComponent[]; errors: string[] } {
