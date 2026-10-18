@@ -43,7 +43,7 @@ export function FinalizarStep() {
   const [modalTipo, setModalTipo] = useState<RecomendacionItem | null>(null)
 
   const abrirDetalle = (id: string) =>
-    navigate(`/componente/${id}?flujo=modo-rapido`)
+    navigate(`/componente/${id}?flujo=modo-rapido&volver=/builder-rapido/finalizar`)
 
   // Añadido desde el detalle: aplica el override pendiente y limpia la señal
   useEffect(() => {

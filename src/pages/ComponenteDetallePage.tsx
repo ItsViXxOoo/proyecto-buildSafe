@@ -351,8 +351,20 @@ export function ComponenteDetallePage() {
   const tipoSlug = comp.component_types?.slug ?? 'cpu'
 
   const volver = () => {
-    if (window.history.length > 2 && document.referrer) window.history.back()
-    else navigate('/builder-rapido/presupuesto')
+    // 1) Retorno explícito del Modo Rápido; 2) último paso del wizard visitado
+    // (cubre detalle abierto por URL directa mientras se está armando la build);
+    // 3) history.back(); 4) presupuesto.
+    const destinoParam = searchParams.get('volver')
+    const rutaGuardada = sessionStorage.getItem('modo_rapido_ruta')
+    if (destinoParam) {
+      navigate(destinoParam)
+    } else if (rutaGuardada) {
+      navigate(rutaGuardada)
+    } else if (window.history.length > 1) {
+      window.history.back()
+    } else {
+      navigate('/builder-rapido/presupuesto')
+    }
   }
 
   const anadirABuild = () => {

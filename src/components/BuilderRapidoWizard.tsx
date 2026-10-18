@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Navigate, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { useBuilderRapido } from '../context/BuilderRapidoContext'
 
@@ -10,6 +11,7 @@ const PASOS = [
 ] as const
 
 const PASOS_REQUISITOS: Record<string, (state: ReturnType<typeof useBuilderRapido>['state']) => boolean> = {
+  presupuesto: (s) => s.presupuesto !== null,
   uso: (s) => s.presupuesto !== null,
   resolucion: (s) => s.presupuesto !== null && s.uso !== null,
   detalles: (s) => s.presupuesto !== null && s.uso !== null && s.resolucion !== null,
@@ -22,22 +24,32 @@ function WizardContent() {
   const location = useLocation()
   const navigate = useNavigate()
 
+  // Registrar el paso actual para que el detalle de componente
+  // pueda volver a donde el usuario estaba (fallback sin ?volver=)
+  useEffect(() => {
+    sessionStorage.setItem('modo_rapido_ruta', location.pathname)
+  }, [location.pathname])
+
   const currentIndex = PASOS.findIndex(
     (p) => location.pathname.endsWith(p.path),
   )
 
   if (currentIndex === -1) {
-    return <Navigate to="presupuesto" replace />
+    // Redirección inteligente: retomar en el primer paso pendiente, o en
+    // Finalizar si el estado de la build ya está completo
+    const primerIncompleto = PASOS.find(
+      (p) => !PASOS_REQUISITOS[p.path]?.(state),
+    )
+    return <Navigate to={primerIncompleto?.path ?? 'finalizar'} replace />
   }
 
   const pasoActual = PASOS[currentIndex]
   const requisito = PASOS_REQUISITOS[pasoActual.path]
   if (requisito && !requisito(state)) {
-    const primerPasoIncompleto = PASOS.find((p) => {
-      const req = PASOS_REQUISITOS[p.path]
-      return req && !req(state)
-    })
-    if (primerPasoIncompleto) {
+    // Volver al primer paso pendiente; si ya es el actual, se renderiza normal
+    // (la UI bloquea avanzar con el botón Siguiente deshabilitado)
+    const primerPasoIncompleto = PASOS.find((p) => !PASOS_REQUISITOS[p.path]?.(state))
+    if (primerPasoIncompleto && primerPasoIncompleto !== pasoActual) {
       return <Navigate to={primerPasoIncompleto.path} replace />
     }
   }

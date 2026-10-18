@@ -98,5 +98,38 @@ const badges = await page.evaluate(() => document.querySelectorAll('.componente-
 console.log('badges manual tras añadir:', badges)
 await page.screenshot({ path: `${OUT}/7-finalizar-tras-anadir.png`, fullPage: true })
 
+// 8) Volver desde el detalle debe regresar a Finalizar (no a presupuesto)
+await page.click('.componente-recomendado-card')
+await page.waitForSelector('.detalle-componente', { timeout: 15000 })
+await new Promise((r) => setTimeout(r, 800))
+await page.click('.detalle-volver button')
+await page.waitForSelector('.componente-recomendado-card', { timeout: 20000 })
+const urlTrasVolver = page.url()
+console.log('URL tras Volver:', urlTrasVolver)
+if (urlTrasVolver.includes('presupuesto')) {
+  console.error('❌ Volver regresó a presupuesto en lugar de Finalizar')
+  process.exitCode = 1
+} else {
+  console.log('✅ Volver regresa a Finalizar con la build intacta')
+}
+
+// 9) Detalle por URL directa (sin sesion del wizard): al recargar, el estado en
+// memoria del wizard se pierde -> "Volver" debe llevar a presupuesto sin colgarse
+await page.click('.componente-recomendado-card')
+await page.waitForSelector('.detalle-componente', { timeout: 15000 })
+const pathDetalle = new URL(page.url()).pathname
+await page.goto(`${BASE}${pathDetalle}`, { waitUntil: 'networkidle2' })
+await new Promise((r) => setTimeout(r, 800))
+await page.click('.detalle-volver button')
+await page.waitForSelector('.wizard-step-content', { timeout: 20000 })
+console.log('URL tras Volver (sesion nueva):', page.url())
+if (page.url().includes('/builder-rapido/')) {
+  console.log('✅ Volver con sesion nueva cae en el wizard (presupuesto), sin pantalla en blanco')
+} else {
+  console.error('❌ Volver con sesion nueva no aterrizó en el wizard')
+  process.exitCode = 1
+}
+await page.screenshot({ path: `${OUT}/8-volver-directo.png`, fullPage: true })
+
 await browser.close()
 console.log('QA listo: screenshots en', OUT)
