@@ -35,6 +35,7 @@ export interface ComponenteCore {
   psu_watts: number | null
   tdp_w: number | null
   interface: string | null
+  image_url: string | null
   performance_tier: number | null
   specs: Record<string, unknown> | null
 }
@@ -195,8 +196,8 @@ export function buildRecomendacion(
   }
 
   const objetivo = (slug: string) => presupuesto * (dist[slug] ?? 0)
-  const requiereWifi = (c: ComponenteCore): boolean =>
-    detalles.wifi ? specsOf(c)['wifi'] === true || /wifi/i.test(c.name) : true
+  // NOTA: detalles.wifi queda SIN cablear por ahora (requiere re-verificación E2E
+  // del algoritmo tras tocar la selección de placas); filtrar por specs['wifi'].
   const requiereRgb = (c: ComponenteCore): boolean =>
     detalles.rgb ? specsOf(c)['illumination_unicode'] !== undefined || /rgb/i.test(c.name) : true
 

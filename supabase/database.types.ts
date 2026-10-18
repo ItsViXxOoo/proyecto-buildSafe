@@ -414,6 +414,17 @@ export type Database = {
       }
       is_build_owner: { Args: { p_build_id: string }; Returns: boolean }
       is_build_visible: { Args: { p_build_id: string }; Returns: boolean }
+      preview_build_compatibility: {
+        Args: {
+          /** Array jsonb de partes: [{ id: uuid, quantity: number }] */
+          p_parts: Json
+        }
+        Returns: {
+          message: string
+          rule_id: string | null
+          severity: string
+        }[]
+      }
       save_build_compatibility_results: {
         Args: { p_build_id: string }
         Returns: {

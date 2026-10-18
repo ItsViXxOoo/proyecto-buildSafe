@@ -1,6 +1,4 @@
-import type { Tables } from '../../supabase/database.types'
-
-type Component = Tables<'components'>
+import type { ComponenteCore } from '../lib/recomendacion-core'
 
 const TIPO_LABELS: Record<string, string> = {
   cpu: 'Procesador',
@@ -14,7 +12,7 @@ const TIPO_LABELS: Record<string, string> = {
 }
 
 interface ComponenteRecomendadoProps {
-  componente: Component
+  componente: ComponenteCore
   tipo: string
   /** Si se entrega, muestra botón "editar" que abre el modal de alternativas */
   onEditar?: () => void
