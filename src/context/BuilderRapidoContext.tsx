@@ -16,6 +16,8 @@ export interface BuilderRapidoState {
   uso: UsoPrincipal | null
   resolucion: Resolucion | null
   detalles: Detalles
+  /** typeSlug -> componentId elegido manualmente (modifica la recomendación base) */
+  overrides: Record<string, string>
 }
 
 type Action =
@@ -23,6 +25,7 @@ type Action =
   | { type: 'SET_USO'; uso: UsoPrincipal }
   | { type: 'SET_RESOLUCION'; resolucion: Resolucion }
   | { type: 'SET_DETALLES'; detalles: Partial<Detalles> }
+  | { type: 'SET_OVERRIDE'; slug: string; componentId: string | null }
   | { type: 'RESET' }
 
 const initialState: BuilderRapidoState = {
@@ -35,6 +38,7 @@ const initialState: BuilderRapidoState = {
     overclock: false,
     prioridad: 'equilibrio',
   },
+  overrides: {},
 }
 
 function reducer(state: BuilderRapidoState, action: Action): BuilderRapidoState {
@@ -47,6 +51,12 @@ function reducer(state: BuilderRapidoState, action: Action): BuilderRapidoState 
       return { ...state, resolucion: action.resolucion }
     case 'SET_DETALLES':
       return { ...state, detalles: { ...state.detalles, ...action.detalles } }
+    case 'SET_OVERRIDE': {
+      const overrides = { ...state.overrides }
+      if (action.componentId) overrides[action.slug] = action.componentId
+      else delete overrides[action.slug]
+      return { ...state, overrides }
+    }
     case 'RESET':
       return initialState
     default:
@@ -60,6 +70,7 @@ interface BuilderRapidoContextValue {
   setUso: (uso: UsoPrincipal) => void
   setResolucion: (resolucion: Resolucion) => void
   setDetalles: (detalles: Partial<Detalles>) => void
+  setOverride: (slug: string, componentId: string | null) => void
   reset: () => void
 }
 
@@ -75,11 +86,13 @@ export function BuilderRapidoProvider({ children }: { children: ReactNode }) {
     dispatch({ type: 'SET_RESOLUCION', resolucion })
   const setDetalles = (detalles: Partial<Detalles>) =>
     dispatch({ type: 'SET_DETALLES', detalles })
+  const setOverride = (slug: string, componentId: string | null) =>
+    dispatch({ type: 'SET_OVERRIDE', slug, componentId })
   const reset = () => dispatch({ type: 'RESET' })
 
   return (
     <BuilderRapidoContext.Provider
-      value={{ state, setPresupuesto, setUso, setResolucion, setDetalles, reset }}
+      value={{ state, setPresupuesto, setUso, setResolucion, setDetalles, setOverride, reset }}
     >
       {children}
     </BuilderRapidoContext.Provider>

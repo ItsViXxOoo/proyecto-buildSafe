@@ -16,9 +16,12 @@ const TIPO_LABELS: Record<string, string> = {
 interface ComponenteRecomendadoProps {
   componente: Component
   tipo: string
+  /** Si se entrega, muestra botón "editar" que abre el modal de alternativas */
+  onEditar?: () => void
+  editado?: boolean
 }
 
-export function ComponenteRecomendado({ componente, tipo }: ComponenteRecomendadoProps) {
+export function ComponenteRecomendado({ componente, tipo, onEditar, editado }: ComponenteRecomendadoProps) {
   const label = TIPO_LABELS[tipo] ?? tipo
   const precio = componente.current_price
 
@@ -26,9 +29,28 @@ export function ComponenteRecomendado({ componente, tipo }: ComponenteRecomendad
     <div className="componente-recomendado-card">
       <div className="componente-recomendado-header">
         <span className="componente-recomendado-tipo">{label}</span>
-        {precio && (
-          <span className="componente-recomendado-precio">${precio.toLocaleString()}</span>
-        )}
+        <div className="componente-recomendado-header-derecha">
+          {editado && (
+            <span className="componente-recomendado-editado" title="Componente elegido manualmente">
+              <span className="material-symbols-outlined">edit</span>
+              manual
+            </span>
+          )}
+          {precio && (
+            <span className="componente-recomendado-precio">${precio.toLocaleString()}</span>
+          )}
+          {onEditar && (
+            <button
+              type="button"
+              className="componente-recomendado-editar"
+              onClick={onEditar}
+              title={`Cambiar ${label.toLowerCase()}`}
+              aria-label={`Cambiar ${label.toLowerCase()}`}
+            >
+              <span className="material-symbols-outlined">swap_circle</span>
+            </button>
+          )}
+        </div>
       </div>
       <div className="componente-recomendado-body">
         {componente.image_url && (
