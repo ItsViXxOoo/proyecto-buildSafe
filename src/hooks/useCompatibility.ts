@@ -10,12 +10,17 @@ type CheckRow = {
   severity: string
 }
 
+/** Parte de un build en preview: componente + cantidad */
+type CompatPart = { id: string; quantity?: number }
+
 interface UseCompatibilityResult {
   checking: boolean
   error: string | null
   results: CompatResult[]
   check: (buildId: string) => Promise<CompatResult[]>
   checkOnly: (buildId: string) => Promise<CheckRow[]>
+  /** Valida una combinación de componentes SIN persistir nada (Modo Rápido). */
+  preview: (parts: CompatPart[]) => Promise<CheckRow[]>
 }
 
 export function useCompatibility(): UseCompatibilityResult {
@@ -30,6 +35,25 @@ export function useCompatibility(): UseCompatibilityResult {
       const { data, error: err } = await supabase.rpc(
         'check_build_compatibility',
         { p_build_id: buildId },
+      )
+      if (err) throw err
+      return (data ?? []) as CheckRow[]
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e)
+      setError(msg)
+      throw e
+    } finally {
+      setChecking(false)
+    }
+  }, [])
+
+  const preview = useCallback(async (parts: CompatPart[]) => {
+    setChecking(true)
+    setError(null)
+    try {
+      const { data, error: err } = await supabase.rpc(
+        'preview_build_compatibility',
+        { p_parts: parts.map((p) => ({ id: p.id, quantity: p.quantity ?? 1 })) },
       )
       if (err) throw err
       return (data ?? []) as CheckRow[]
@@ -66,5 +90,5 @@ export function useCompatibility(): UseCompatibilityResult {
     [],
   )
 
-  return { checking, error, results, check, checkOnly }
+  return { checking, error, results, check, checkOnly, preview }
 }

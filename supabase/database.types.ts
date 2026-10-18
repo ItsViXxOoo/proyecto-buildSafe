@@ -224,6 +224,7 @@ export type Database = {
           capacity_gb: number | null
           chipset: string | null
           cooler_height_mm: number | null
+          cooler_sockets: string[] | null
           created_at: string
           current_price: number | null
           form_factor: string | null
@@ -234,10 +235,12 @@ export type Database = {
           is_active: boolean
           max_cooler_height_mm: number | null
           max_gpu_len_mm: number | null
+          memory_slots: number | null
           name: string
           performance_tier: number | null
           price_currency: string
           psu_watts: number | null
+          ram_modules: number | null
           ram_type: string | null
           search_vector: unknown
           socket: string | null
@@ -253,6 +256,7 @@ export type Database = {
           capacity_gb?: number | null
           chipset?: string | null
           cooler_height_mm?: number | null
+          cooler_sockets?: string[] | null
           created_at?: string
           current_price?: number | null
           form_factor?: string | null
@@ -263,10 +267,12 @@ export type Database = {
           is_active?: boolean
           max_cooler_height_mm?: number | null
           max_gpu_len_mm?: number | null
+          memory_slots?: number | null
           name: string
           performance_tier?: number | null
           price_currency?: string
           psu_watts?: number | null
+          ram_modules?: number | null
           ram_type?: string | null
           search_vector?: unknown
           socket?: string | null
@@ -282,6 +288,7 @@ export type Database = {
           capacity_gb?: number | null
           chipset?: string | null
           cooler_height_mm?: number | null
+          cooler_sockets?: string[] | null
           created_at?: string
           current_price?: number | null
           form_factor?: string | null
@@ -292,10 +299,12 @@ export type Database = {
           is_active?: boolean
           max_cooler_height_mm?: number | null
           max_gpu_len_mm?: number | null
+          memory_slots?: number | null
           name?: string
           performance_tier?: number | null
           price_currency?: string
           psu_watts?: number | null
+          ram_modules?: number | null
           ram_type?: string | null
           search_vector?: unknown
           socket?: string | null
