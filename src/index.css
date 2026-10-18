@@ -56,6 +56,17 @@ input {
   font-family: inherit;
 }
 
+/* Giro para iconos de carga (autorenew) */
+.icon-spin {
+  animation: icon-spin-s 1s linear infinite;
+}
+
+@keyframes icon-spin-s {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 img {
   max-width: 100%;
   display: block;

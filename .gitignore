@@ -30,3 +30,6 @@ opencode.json
 *.njsproj
 *.sln
 *.sw?
+
+scripts/qa-shots/
+build_verif.txt

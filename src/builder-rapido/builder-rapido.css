@@ -729,28 +729,12 @@
   font-size: 13px;
 }
 
-.componente-recomendado-editar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border: 1px solid var(--color-outline);
-  border-radius: 50%;
-  background: var(--color-surface-card);
-  color: var(--color-on-surface-variant);
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
+/* Botón cambiar: la versión pill se define al final del archivo (ver última regla). */
+
+.componente-recomendado-editado .material-symbols-outlined {
+  font-size: 13px;
 }
 
-.componente-recomendado-editar .material-symbols-outlined {
-  font-size: 16px;
-}
-
-.componente-recomendado-editar:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
 
 /* Toolbar final: guardar + exportar */
 .finalizar-toolbar {
@@ -1061,4 +1045,148 @@
   margin: 8px 0;
   font-size: 14px;
   color: var(--color-muted);
+}
+
+/* ===== Ajustes de card (QA Fase: botón Cambiar pill, foto y clic a detalle) ===== */
+.componente-recomendado-card.clipeable {
+  cursor: pointer;
+}
+
+.componente-recomendado-card.clipeable:hover {
+  border-color: var(--color-primary);
+}
+
+.componente-recomendado-card.clipeable:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.componente-recomendado-editar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 30px;
+  padding: 0 12px;
+  border: 1px solid var(--color-outline);
+  border-radius: 999px;
+  background: var(--color-surface-card);
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.componente-recomendado-editar .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.componente-recomendado-editar:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: #eff6ff;
+}
+
+.componente-recomendado-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.componente-recomendado-imagen-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f3fe;
+  border: 1px solid var(--color-border);
+  color: #c3c6d7;
+}
+
+.componente-recomendado-imagen-fallback .material-symbols-outlined {
+  font-size: 36px;
+}
+
+/* Modal de alternativas: fila contenedor + botones hermanos */
+.modal-item {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface-card);
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal-item:hover:not(.modal-item-actual) {
+  border-color: var(--color-primary);
+}
+
+.modal-item.modal-item-actual {
+  border-color: var(--color-primary);
+  background: #eff6ff;
+}
+
+.modal-item-principal {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.modal-item-principal:disabled {
+  cursor: default;
+}
+
+.modal-item-foto {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: #f3f3fe;
+  flex-shrink: 0;
+}
+
+.modal-item-foto-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c3c6d7;
+  border: 1px solid var(--color-border);
+}
+
+.modal-item-foto-fallback .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.modal-item-detalle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border: none;
+  background: transparent;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.modal-item-detalle:hover {
+  color: var(--color-primary);
+  background: #eff6ff;
+}
+
+.modal-item-detalle .material-symbols-outlined {
+  font-size: 20px;
 }

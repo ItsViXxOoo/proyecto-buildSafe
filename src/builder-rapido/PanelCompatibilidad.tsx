@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { useCompatibility } from '../hooks/useCompatibility'
 
 export type CompatPart = { id: string; quantity?: number }
@@ -10,8 +10,8 @@ type CheckRow = {
 }
 
 /**
- * Panel de compatibilidad en vivo (Modo Rápido): valida la combinación actual
- * contra el motor SQL vía `preview_build_compatibility`, sin persistir nada.
+ * Panel de compatibilidad en vivo (Modo RÃ¡pido): valida la combinaciÃ³n actual
+ * contra el motor SQL vÃ­a `preview_build_compatibility`, sin persistir nada.
  */
 export function PanelCompatibilidad({ parts }: { parts: CompatPart[] }) {
   const { preview, checking, error } = useCompatibility()
@@ -48,7 +48,7 @@ export function PanelCompatibilidad({ parts }: { parts: CompatPart[] }) {
         <span className="material-symbols-outlined">fact_check</span>
         <h3>Compatibilidad</h3>
         {checking && (
-          <span className="material-symbols-outlined compat-chequeando">progress_activity</span>
+          <span className="material-symbols-outlined compat-chequeando">autorenew</span>
         )}
       </div>
 
@@ -86,7 +86,7 @@ export function PanelCompatibilidad({ parts }: { parts: CompatPart[] }) {
 
       {!error && resultados.length > 0 && (
         <p className="compat-resumen">
-          {totalAvisos} aviso{totalAvisos !== 1 ? 's' : ''} ·{' '}
+          {totalAvisos} aviso{totalAvisos !== 1 ? 's' : ''} Â·{' '}
           {errores.length > 0
             ? 'corrige los errores antes de guardar.'
             : advertencias.length > 0
@@ -97,3 +97,4 @@ export function PanelCompatibilidad({ parts }: { parts: CompatPart[] }) {
     </div>
   )
 }
+

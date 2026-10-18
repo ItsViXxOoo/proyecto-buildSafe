@@ -2,10 +2,12 @@ import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { useAuth } from './lib/auth-context'
+import { BuilderRapidoProvider } from './context/BuilderRapidoContext'
 import { HomePage } from './pages/HomePage'
 import { LoginPage } from './pages/LoginPage'
 import { RegisterPage } from './pages/RegisterPage'
 import { BuilderInfoPage } from './pages/BuilderInfoPage'
+import { ComponenteDetallePage } from './pages/ComponenteDetallePage'
 import { BuilderRapidoWizard } from './components/BuilderRapidoWizard'
 import { PresupuestoStep } from './builder-rapido/PresupuestoStep'
 import { UsoStep } from './builder-rapido/UsoStep'
@@ -15,6 +17,7 @@ import { FinalizarStep } from './builder-rapido/FinalizarStep'
 import './App.css'
 import './components/chrome.css'
 import './pages/pages.css'
+import './pages/detalle-componente.css'
 import './builder-rapido/builder-rapido.css'
 
 function Layout() {
@@ -26,7 +29,7 @@ function Layout() {
       <main>
         {loading ? (
           <div className="loading-screen">
-            <span className="material-symbols-outlined">progress_activity</span>
+            <span className="material-symbols-outlined icon-spin">autorenew</span>
             <p>Cargando...</p>
           </div>
         ) : (
@@ -40,21 +43,24 @@ function Layout() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/registro" element={<RegisterPage />} />
-        <Route path="/builder" element={<BuilderInfoPage />} />
-        <Route path="/builder-rapido" element={<BuilderRapidoWizard />}>
-          <Route path="presupuesto" element={<PresupuestoStep />} />
-          <Route path="uso" element={<UsoStep />} />
-          <Route path="resolucion" element={<ResolucionStep />} />
-          <Route path="detalles" element={<DetallesStep />} />
-          <Route path="finalizar" element={<FinalizarStep />} />
+    <BuilderRapidoProvider>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/registro" element={<RegisterPage />} />
+          <Route path="/builder" element={<BuilderInfoPage />} />
+          <Route path="/builder-rapido" element={<BuilderRapidoWizard />}>
+            <Route path="presupuesto" element={<PresupuestoStep />} />
+            <Route path="uso" element={<UsoStep />} />
+            <Route path="resolucion" element={<ResolucionStep />} />
+            <Route path="detalles" element={<DetallesStep />} />
+            <Route path="finalizar" element={<FinalizarStep />} />
+          </Route>
+          <Route path="/componente/:id" element={<ComponenteDetallePage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Route>
-    </Routes>
+      </Routes>
+    </BuilderRapidoProvider>
   )
 }

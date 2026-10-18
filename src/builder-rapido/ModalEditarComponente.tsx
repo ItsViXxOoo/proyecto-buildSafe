@@ -6,6 +6,7 @@ type Alternativa = {
   brand: string | null
   current_price: number | null
   performance_tier: number | null
+  image_url?: string | null
 }
 
 interface ModalEditarComponenteProps {
@@ -15,6 +16,8 @@ interface ModalEditarComponenteProps {
   alternativas: Alternativa[]
   onElegir: (id: string) => void
   onCerrar: () => void
+  /** Si se entrega, cada fila muestra botón para ver el detalle del componente */
+  onVerDetalle?: (id: string) => void
 }
 
 /**
@@ -28,6 +31,7 @@ export function ModalEditarComponente({
   alternativas,
   onElegir,
   onCerrar,
+  onVerDetalle,
 }: ModalEditarComponenteProps) {
   const [busqueda, setBusqueda] = useState('')
 
@@ -88,28 +92,50 @@ export function ModalEditarComponente({
             <p className="modal-vacio">Sin resultados para "{busqueda}".</p>
           )}
           {lista.map((c) => (
-            <button
+            <div
               key={c.id}
-              type="button"
               className={`modal-item${c.id === componenteActualId ? ' modal-item-actual' : ''}`}
-              onClick={() => onElegir(c.id)}
-              disabled={c.id === componenteActualId}
             >
-              <span className="modal-item-info">
-                <span className="modal-item-nombre">{c.name}</span>
-                <span className="modal-item-meta">
-                  {c.brand && <span>{c.brand}</span>}
-                  {c.performance_tier && (
-                    <span className={`modal-item-tier tier-${c.performance_tier}`}>
-                      Tier {c.performance_tier}
-                    </span>
-                  )}
+              <button
+                type="button"
+                className="modal-item-principal"
+                onClick={() => onElegir(c.id)}
+                disabled={c.id === componenteActualId}
+              >
+                {c.image_url ? (
+                  <img src={c.image_url} alt="" className="modal-item-foto" loading="lazy" />
+                ) : (
+                  <span className="modal-item-foto modal-item-foto-fallback" aria-hidden="true">
+                    <span className="material-symbols-outlined">computer</span>
+                  </span>
+                )}
+                <span className="modal-item-info">
+                  <span className="modal-item-nombre">{c.name}</span>
+                  <span className="modal-item-meta">
+                    {c.brand && <span>{c.brand}</span>}
+                    {c.performance_tier && (
+                      <span className={`modal-item-tier tier-${c.performance_tier}`}>
+                        Tier {c.performance_tier}
+                      </span>
+                    )}
+                  </span>
                 </span>
-              </span>
-              <span className="modal-item-precio">
-                {c.current_price != null ? `$${c.current_price.toLocaleString()}` : '—'}
-              </span>
-            </button>
+                <span className="modal-item-precio">
+                  {c.current_price != null ? `$${c.current_price.toLocaleString()}` : '—'}
+                </span>
+              </button>
+              {onVerDetalle && (
+                <button
+                  type="button"
+                  className="modal-item-detalle"
+                  title="Ver especificaciones"
+                  aria-label={`Ver detalle de ${c.name}`}
+                  onClick={() => onVerDetalle(c.id)}
+                >
+                  <span className="material-symbols-outlined">info</span>
+                </button>
+              )}
+            </div>
           ))}
         </div>
       </div>

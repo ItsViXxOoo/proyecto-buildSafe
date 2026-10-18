@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useBuilderRapido } from '../context/BuilderRapidoContext'
 import { useRecomendacion } from '../hooks/useRecomendacion'
 import { useBuilds } from '../hooks/useBuilds'
@@ -30,6 +31,7 @@ const PRIORIDAD_LABELS: Record<string, string> = {
 
 export function FinalizarStep() {
   const { state, setOverride } = useBuilderRapido()
+  const navigate = useNavigate()
   const { user, showToast } = useAuth()
   const { recomendaciones, loading, error, precioTotal, alternativas } = useRecomendacion()
   const { createBuild, addComponent } = useBuilds()
@@ -39,6 +41,22 @@ export function FinalizarStep() {
   const [guardada, setGuardada] = useState<{ id: string; title: string } | null>(null)
   const [guardarError, setGuardarError] = useState<string | null>(null)
   const [modalTipo, setModalTipo] = useState<RecomendacionItem | null>(null)
+
+  const abrirDetalle = (id: string) =>
+    navigate(`/componente/${id}?flujo=modo-rapido`)
+
+  // Añadido desde el detalle: aplica el override pendiente y limpia la señal
+  useEffect(() => {
+    const pendiente = sessionStorage.getItem('modo_rapido_override')
+    if (!pendiente) return
+    try {
+      const { slug, id } = JSON.parse(pendiente) as { slug: string; id: string }
+      if (slug && id) setOverride(slug, id)
+    } catch {
+      /* señal inválida: se ignora */
+    }
+    sessionStorage.removeItem('modo_rapido_override')
+  }, [setOverride])
 
   async function guardarBuild() {
     if (!user || !state.uso || recomendaciones.length === 0) return
@@ -175,9 +193,9 @@ export function FinalizarStep() {
         </span>
       </div>
 
-      {loading && (
+          {loading && (
         <div className="recomendacion-loading">
-          <span className="material-symbols-outlined">progress_activity</span>
+          <span className="material-symbols-outlined icon-spin">autorenew</span>
           <p>Generando recomendaciones...</p>
         </div>
       )}
@@ -205,6 +223,7 @@ export function FinalizarStep() {
               tipo={rec.tipo}
               editado={state.overrides[rec.tipoSlug] === rec.componente.id}
               onEditar={() => setModalTipo(rec)}
+              onAbrirDetalle={() => abrirDetalle(rec.componente.id)}
             />
           ))}
         </div>
@@ -220,8 +239,8 @@ export function FinalizarStep() {
             onClick={guardarBuild}
             disabled={guardando || !user}
           >
-            <span className="material-symbols-outlined">
-              {guardando ? 'progress_activity' : 'save'}
+            <span className={`material-symbols-outlined${guardando ? ' icon-spin' : ''}`}>
+              {guardando ? 'autorenew' : 'save'}
             </span>
             {guardando ? 'Guardando...' : 'Guardar build'}
           </button>
@@ -239,7 +258,7 @@ export function FinalizarStep() {
             className="finalizar-boton"
             onClick={() => exportar('json')}
           >
-            <span className="material-symbols-outlined">code_blocks</span>
+            <span className="material-symbols-outlined">data_object</span>
             Exportar JSON
           </button>
         </div>
@@ -273,6 +292,7 @@ export function FinalizarStep() {
             setModalTipo(null)
           }}
           onCerrar={() => setModalTipo(null)}
+          onVerDetalle={abrirDetalle}
         />
       )}
     </div>

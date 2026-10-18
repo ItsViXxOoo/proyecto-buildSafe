@@ -1,5 +1,5 @@
 import { Navigate, Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { BuilderRapidoProvider, useBuilderRapido } from '../context/BuilderRapidoContext'
+import { useBuilderRapido } from '../context/BuilderRapidoContext'
 
 const PASOS = [
   { path: 'presupuesto', label: 'Presupuesto', icon: 'payments' },
@@ -102,9 +102,5 @@ function WizardContent() {
 }
 
 export function BuilderRapidoWizard() {
-  return (
-    <BuilderRapidoProvider>
-      <WizardContent />
-    </BuilderRapidoProvider>
-  )
+  return <WizardContent />
 }
