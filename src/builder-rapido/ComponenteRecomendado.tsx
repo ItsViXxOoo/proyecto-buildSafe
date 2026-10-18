@@ -40,6 +40,14 @@ export function ComponenteRecomendado({ componente, tipo }: ComponenteRecomendad
         )}
         <div className="componente-recomendado-info">
           <h4 className="componente-recomendado-nombre">{componente.name}</h4>
+          {componente.performance_tier && (
+            <span
+              className={`componente-recomendado-tier tier-${componente.performance_tier}`}
+              title="Nivel de rendimiento relativo dentro de su categoría (1-5)"
+            >
+              Tier {componente.performance_tier}
+            </span>
+          )}
           {componente.brand && (
             <span className="componente-recomendado-marca">{componente.brand}</span>
           )}

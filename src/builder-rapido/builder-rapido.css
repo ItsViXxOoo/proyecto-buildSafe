@@ -615,6 +615,23 @@
   color: var(--color-muted);
 }
 
+.componente-recomendado-tier {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  line-height: 1.4;
+}
+
+.componente-recomendado-tier.tier-1 { background: #f1f5f9; color: #475569; }
+.componente-recomendado-tier.tier-2 { background: #dbeafe; color: #1d4ed8; }
+.componente-recomendado-tier.tier-3 { background: #dcfce7; color: #15803d; }
+.componente-recomendado-tier.tier-4 { background: #fef3c7; color: #b45309; }
+.componente-recomendado-tier.tier-5 { background: #fee2e2; color: #b91c1c; }
+
 @media (max-width: 960px) {
   .quick-picks-grid {
     grid-template-columns: repeat(2, 1fr);

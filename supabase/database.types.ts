@@ -235,6 +235,7 @@ export type Database = {
           max_cooler_height_mm: number | null
           max_gpu_len_mm: number | null
           name: string
+          performance_tier: number | null
           price_currency: string
           psu_watts: number | null
           ram_type: string | null
@@ -263,6 +264,7 @@ export type Database = {
           max_cooler_height_mm?: number | null
           max_gpu_len_mm?: number | null
           name: string
+          performance_tier?: number | null
           price_currency?: string
           psu_watts?: number | null
           ram_type?: string | null
@@ -291,6 +293,7 @@ export type Database = {
           max_cooler_height_mm?: number | null
           max_gpu_len_mm?: number | null
           name?: string
+          performance_tier?: number | null
           price_currency?: string
           psu_watts?: number | null
           ram_type?: string | null
