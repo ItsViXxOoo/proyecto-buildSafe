@@ -27,6 +27,7 @@ export interface ComponenteCore {
   chipset: string | null
   capacity_gb: number | null
   speed_mts: number | null
+  ram_modules: number | null
   gpu_len_mm: number | null
   supported_form_factors: string[] | null
   max_gpu_len_mm: number | null
@@ -118,6 +119,40 @@ export const cpuTieneCoolerStock = (c: ComponenteCore): boolean => {
   const col = specsOf(c)['cooler_unicode']
   return typeof col === 'string' && col !== '' && !/no posee/i.test(col)
 }
+
+/** RAM SO-DIMM = formato laptop: físicamente no encaja en placas de escritorio */
+export const esRamSodimm = (c: ComponenteCore): boolean => /SO-DIMM/i.test(c.name)
+
+/** Filtra SO-DIMM para builds de escritorio; si SOLO hay SO-DIMM, devuelve la lista original */
+export function ramEscritorio(lista: ComponenteCore[]): ComponenteCore[] {
+  const ok = lista.filter((r) => !esRamSodimm(r))
+  return ok.length > 0 ? ok : lista
+}
+
+/** Storage de servidor (SAS/enterprise): no corresponde a builds de escritorio.
+ *  Tres formas en los datos: interface='Servidor', type_name='Servidor',
+ *  y marcas enterprise (Dell/HP/IBM/EMC/HGST/Lenovo/Oracle/Ubiquiti). */
+export const stTipo = (s: ComponenteCore): string =>
+  String(specsOf(s)['type_name'] ?? '').toUpperCase()
+export const ST_MARCAS_ENTERPRISE = new Set([
+  'hp', 'hpe', 'dell', 'emc', 'ibm', 'fujitsu', 'lenovo', 'oracle', 'ubiquiti', 'hgst',
+])
+export const stEsServidor = (s: ComponenteCore): boolean =>
+  (s.interface ?? '') === 'Servidor' ||
+  stTipo(s) === 'SERVIDOR' ||
+  ST_MARCAS_ENTERPRISE.has((s.brand ?? '').toLowerCase())
+export const stEsHdd = (s: ComponenteCore): boolean => stTipo(s) === 'HDD'
+export const stEsNvme = (s: ComponenteCore): boolean =>
+  /nvme/i.test(String(specsOf(s)['bus_unicode'] ?? ''))
+
+/** Marcas de PSU reales de escritorio. Excluye OEM de gabinete/locales (Clio, Snake,
+ *  EsGaming, Gamemax, Kronos, EINAREX): sin certificación ni garantía seria. */
+export const PSU_MARCAS_REALES = new Set([
+  'msi', 'gigabyte', 'asus', 'be quiet!', 'xpg', 'seasonic', 'cougar', 'deepcool',
+  'thermalright', 'corsair', 'xilence', 'cooler master', 'segotep', 'lian li',
+  'super flower', 'antec', 'evga', 'thermaltake', 'gamdias', 'fractal design',
+  'nzxt', 'phanteks', 'silverstone',
+])
 
 /** CPU desbloqueada para overclock (Intel K/KF/KS, AMD Ryzen X/X3D) sobre el nombre base */
 export const cpuEsDesbloqueada = (c: ComponenteCore): boolean => {
@@ -220,18 +255,24 @@ export function buildRecomendacion(
     [...lista].sort((a, b) => precioDe(a) - precioDe(b)).find((c) => precioDe(c) <= tope)
   const masBaratoAbsoluto = (lista: ComponenteCore[]): ComponenteCore | undefined =>
     [...lista].sort((a, b) => precioDe(a) - precioDe(b))[0]
-  /** Mínimo REAL de RAM con capacidad objetivo (por tipo de placa si se conoce) */
+  /** Mínimo REAL de RAM con capacidad objetivo (por tipo de placa si se conoce; sin SO-DIMM) */
   const minRamReserva = (ramType: string | null | undefined): number => {
-    const conCap = porTipo('ram').filter((r) => (r.capacity_gb ?? 0) >= RAM_OBJETIVO[uso])
+    const conCap = ramEscritorio(porTipo('ram')).filter((r) => (r.capacity_gb ?? 0) >= RAM_OBJETIVO[uso])
     const porTipoRam = ramType ? conCap.filter((r) => r.ram_type === ramType) : conCap
     if (porTipoRam.length > 0) return minPrecio(porTipoRam)
-    const soloTipo = ramType ? porTipo('ram').filter((r) => r.ram_type === ramType) : porTipo('ram')
+    const soloTipo = ramType ? ramEscritorio(porTipo('ram')).filter((r) => r.ram_type === ramType) : ramEscritorio(porTipo('ram'))
     return soloTipo.length > 0 ? minPrecio(soloTipo) : minPrecio(porTipo('ram'))
   }
-  /** Mínimo REAL de storage con la capacidad mínima del uso */
+  /** Mínimo REAL de storage: reserva el SSD más barato de la banda (el pick puede ser
+   *  NVMe según ventana); sin piezas de servidor */
   const minStorageReserva = (): number => {
-    const conCap = porTipo('storage').filter((s) => (s.capacity_gb ?? 0) >= STORAGE_BANDA[uso][0])
-    return conCap.length > 0 ? minPrecio(conCap) : minPrecio(porTipo('storage'))
+    const base = porTipo('storage').filter((s) => !stEsServidor(s))
+    const conCap = base.filter((s) => (s.capacity_gb ?? 0) >= STORAGE_BANDA[uso][0])
+    const ssd = conCap.filter((s) => !stEsHdd(s))
+    for (const lista of [ssd, conCap, base]) {
+      if (lista.length > 0) return minPrecio(lista)
+    }
+    return minPrecio(porTipo('storage'))
   }
 
   // ── 0. ¿GPU discreta factible? ─────────────────────────────────
@@ -303,7 +344,7 @@ export function buildRecomendacion(
       const mbCands = mbs.filter((m) => !socket || normalizarSocket(m.socket) === socket)
       if (mbCands.length === 0) continue
       for (const mb of mbCands) {
-        const soloTipo = mb.ram_type ? porTipo('ram').filter((r) => r.ram_type === mb.ram_type) : porTipo('ram')
+        const soloTipo = ramEscritorio(mb.ram_type ? porTipo('ram').filter((r) => r.ram_type === mb.ram_type) : porTipo('ram'))
         const minRamRelajada = soloTipo.length > 0 ? minPrecio(soloTipo) : minPrecio(porTipo('ram'))
         const topePar = reservaSinRam() - minRamRelajada
         const total = precioDe(cpu) + precioDe(mb)
@@ -342,15 +383,25 @@ export function buildRecomendacion(
     relajaciones.push('RAM sin match de tipo con la placa; filtro relajado')
     ramCands = porTipo('ram')
   }
+  // SO-DIMM = formato laptop: físicamente no encaja en la placa de escritorio
+  const previoSodimm = ramCands.length
+  ramCands = ramEscritorio(ramCands)
+  if (ramCands.length < previoSodimm) relajaciones.push('Se excluyó RAM SO-DIMM (formato laptop) para el build de escritorio')
   const velOk = ramCands.filter((r) => (r.speed_mts ?? 0) >= ramSpeedMin)
   if (velOk.length > 0) ramCands = velOk
-  const capOk = ramCands.filter((r) => (r.capacity_gb ?? 0) >= ramObjetivo)
   const topeRam = presupuesto * 0.985 - gastoActual() - minStorageReserva() - minPrecio(porTipo('psu')) - minPrecio(porTipo('case')) - minCooler() - gpuReserve
   const ventanaRam = Math.min(objetivo('ram'), topeRam)
+  // Dual channel preferente (kits de 2+ módulos) cuando cumple capacidad y presupuesto
+  const capOk = ramCands.filter((r) => (r.capacity_gb ?? 0) >= ramObjetivo)
+  const capDual = capOk.filter((r) => (r.ram_modules ?? 1) >= 2)
+  const baseRam = capDual.length > 0 ? capDual : capOk
   let ram: ComponenteCore | undefined
-  if (capOk.length > 0) {
-    const rram = pickEn(capOk, 'ram', ventanaRam, objetivo('ram'), pesos.ram)
-    ram = rram.pick ?? masBaratoDentro(capOk, topeRam)
+  if (capDual.length > 0 && capOk.length > 0 && precioDe([...capDual].sort((a, b) => precioDe(a) - precioDe(b))[0]) > ventanaRam) {
+    relajaciones.push('Dual channel alcanzable solo fuera de la ventana; se usó kit de módulo único')
+  }
+  if (baseRam.length > 0) {
+    const rram = pickEn(baseRam, 'ram', ventanaRam, objetivo('ram'), pesos.ram)
+    ram = rram.pick ?? masBaratoDentro(baseRam, topeRam)
   }
   if (!ram) ram = masBaratoDentro(ramCands, topeRam)
   if (!ram) ram = masBaratoAbsoluto(ramCands)
@@ -386,18 +437,25 @@ export function buildRecomendacion(
     else relajaciones.push('GPU discreta imposible con el presupuesto restante; se usará la iGPU de la CPU')
   }
 
-  // ── 4. Storage (banda por uso + NVMe preferente) ───────────────
+  // ── 4. Storage (banda por uso + preferencia NVMe SSD > SSD > HDD, sin servidor) ──
   const [stMin, stMax] = STORAGE_BANDA[uso]
-  let stCands = porTipo('storage').filter((s) => (s.capacity_gb ?? 0) >= stMin && (s.capacity_gb ?? 0) <= stMax)
-  if (stCands.length === 0) stCands = porTipo('storage').filter((s) => (s.capacity_gb ?? 0) >= stMin)
+  let stPool = porTipo('storage').filter((s) => !stEsServidor(s))
+  if (stPool.length === 0) {
+    relajaciones.push('Solo hay discos de servidor disponibles; filtro relajado')
+    stPool = porTipo('storage')
+  }
+  let stCands = stPool.filter((s) => (s.capacity_gb ?? 0) >= stMin && (s.capacity_gb ?? 0) <= stMax)
+  if (stCands.length === 0) stCands = stPool.filter((s) => (s.capacity_gb ?? 0) >= stMin)
   if (stCands.length === 0) {
     relajaciones.push(`storage >= ${stMin} GB no entró en el presupuesto`)
-    stCands = porTipo('storage')
+    stCands = stPool
   }
-  const nvme = stCands.filter((s) => /nvme/i.test(s.interface ?? ''))
+  // Un SSD como disco único es la diferencia entre un PC funcional y uno insoportable
+  const nvmeSsd = stCands.filter(stEsNvme)
+  const ssd = stCands.filter((s) => !stEsHdd(s))
+  const baseSt = nvmeSsd.length > 0 ? nvmeSsd : ssd.length > 0 ? ssd : stCands
   const topeSt = presupuesto * 0.985 - gastoActual() - minPrecio(porTipo('psu')) - minPrecio(porTipo('case')) - minCooler()
   const ventanaSt = Math.min(objetivo('storage'), topeSt)
-  const baseSt = nvme.length > 0 ? nvme : stCands
   const rst = pickEn(baseSt, 'storage', ventanaSt, objetivo('storage'), pesos.storage)
   const storage = rst.pick ?? masBaratoDentro(baseSt, topeSt) ?? masBaratoAbsoluto(baseSt)
   if (storage) {
@@ -415,6 +473,10 @@ export function buildRecomendacion(
     relajaciones.push(`Sin PSUs de ${wattsReq} W asequibles; se tomó la más cercana (el motor de compatibilidad avisará)`)
     psuCands = porTipo('psu')
   }
+  // Una fuente OEM de gabinete ($12) es un riesgo real: marca confiable obligatoria
+  const psuMarcaOk = psuCands.filter((p) => PSU_MARCAS_REALES.has((p.brand ?? '').toLowerCase()))
+  if (psuMarcaOk.length > 0) psuCands = psuMarcaOk
+  else relajaciones.push('Solo hay PSUs OEM genéricas disponibles; se relajó el filtro de marca')
   if (detalles.prioridad === 'silencio') {
     const gold = psuCands.filter((p) => /gold|platinum|titanium/i.test(String(specsOf(p)['certification_unicode'] ?? '')))
     if (gold.length > 0) psuCands = gold
@@ -504,6 +566,17 @@ export function buildRecomendacion(
         }
       }
     }
+  }
+
+  // ── Rebalanceo: refuerzo de RAM si quedó bajo el objetivo de capacidad ─
+  const itemRam = items.find((w) => w.tipoSlug === 'ram')
+  if (itemRam && (itemRam.componente.capacity_gb ?? 0) < ramObjetivo) {
+    const sobrantePost = presupuesto - gastoActual()
+    const mejores = ramCands
+      .filter((r) => (r.capacity_gb ?? 0) >= ramObjetivo && !esRamSodimm(r))
+      .sort((a, b) => precioDe(a) - precioDe(b))
+    const mejora = mejores.find((r) => precioDe(r) - precioDe(itemRam.componente) <= sobrantePost)
+    if (mejora) reemplazar('ram', mejora, precioDe(mejora))
   }
 
   // ── Orden canónico final ───────────────────────────────────────
