@@ -482,7 +482,26 @@ export function buildRecomendacion(
       const rb = pickEn(cands, boost, ventana, precioDe(previo.componente), boost === 'cpu' ? pesos.cpu : pesos.gpu)
       const b = rb.pick
       if (b && b.id !== previo.componente.id) {
-        reemplazar(boost, b, precioDe(b))
+        // Guard de compatibilidad: el boost no puede romper reglas ya garantizadas
+        // (socket CPU-MB, iGPU en oficina, largo de GPU vs gabinete, vatios de la PSU)
+        const socketOk =
+          boost !== 'cpu' ||
+          !b.socket || !mb.socket ||
+          normalizarSocket(b.socket) === normalizarSocket(mb.socket)
+        const igpuOk = boost !== 'cpu' || uso !== 'oficina' || cpuTieneIgpu(b)
+        const largoOk =
+          boost !== 'gpu' ||
+          !b.gpu_len_mm || !caseFinal?.max_gpu_len_mm ||
+          b.gpu_len_mm <= caseFinal.max_gpu_len_mm
+        const gpuActual = items.find((i) => i.tipoSlug === 'gpu')?.componente
+        const consumoNuevo =
+          boost === 'gpu' ? (cpu.tdp_w ?? 0) + (b.tdp_w ?? 0) : (b.tdp_w ?? 0) + (gpuActual?.tdp_w ?? 0)
+        const psuActual = items.find((i) => i.tipoSlug === 'psu')?.componente
+        const psuOk =
+          !psuActual || !psuActual.psu_watts || Math.ceil(consumoNuevo * MARGEN_PSU) <= psuActual.psu_watts
+        if (socketOk && igpuOk && largoOk && psuOk) {
+          reemplazar(boost, b, precioDe(b))
+        }
       }
     }
   }
