@@ -143,7 +143,7 @@ export const stEsServidor = (s: ComponenteCore): boolean =>
   ST_MARCAS_ENTERPRISE.has((s.brand ?? '').toLowerCase())
 export const stEsHdd = (s: ComponenteCore): boolean => stTipo(s) === 'HDD'
 export const stEsNvme = (s: ComponenteCore): boolean =>
-  /nvme/i.test(String(specsOf(s)['bus_unicode'] ?? ''))
+  /nvme|pcie/i.test(String(specsOf(s)['bus_unicode'] ?? ''))
 
 /** Marcas de PSU reales de escritorio. Excluye OEM de gabinete/locales (Clio, Snake,
  *  EsGaming, Gamemax, Kronos, EINAREX): sin certificación ni garantía seria. */
@@ -453,8 +453,16 @@ export function buildRecomendacion(
   // Un SSD como disco único es la diferencia entre un PC funcional y uno insoportable
   const nvmeSsd = stCands.filter(stEsNvme)
   const ssd = stCands.filter((s) => !stEsHdd(s))
-  const baseSt = nvmeSsd.length > 0 ? nvmeSsd : ssd.length > 0 ? ssd : stCands
   const topeSt = presupuesto * 0.985 - gastoActual() - minPrecio(porTipo('psu')) - minPrecio(porTipo('case')) - minCooler()
+  // La preferencia SSD solo aplica si el SSD más barato de la banda es alcanzable:
+  // un HDD es preferible a pasarse del presupuesto (mejorable con un SSD después)
+  const ssdPref = nvmeSsd.length > 0 ? nvmeSsd : ssd.length > 0 ? ssd : null
+  let baseSt = stCands
+  if (ssdPref) {
+    const minSsd = [...ssdPref].sort((a, b) => precioDe(a) - precioDe(b))[0]
+    if (minSsd && precioDe(minSsd) <= topeSt) baseSt = ssdPref
+    else relajaciones.push('SSD fuera del presupuesto restante; se usa disco mecánico (mejorable con un SSD después)')
+  }
   const ventanaSt = Math.min(objetivo('storage'), topeSt)
   const rst = pickEn(baseSt, 'storage', ventanaSt, objetivo('storage'), pesos.storage)
   const storage = rst.pick ?? masBaratoDentro(baseSt, topeSt) ?? masBaratoAbsoluto(baseSt)

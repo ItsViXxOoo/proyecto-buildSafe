@@ -1,0 +1,3402 @@
+[
+  {
+    "name": "Kingston NV3 1 TB (SNV3S/1000G)",
+    "productId": "253373",
+    "brand": "Kingston",
+    "priceCLP": 151490,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/253373/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade G5 1 TB (SFYR2S/1T0)",
+    "productId": "273865",
+    "brand": "Kingston",
+    "priceCLP": 265990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/273865/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Lexar NM790 2 TB (LNM790X002T-RNNNGU)",
+    "productId": "220675",
+    "brand": "Lexar",
+    "priceCLP": 449900,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/220675/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston NV3 500 GB (SNV3S/500G)",
+    "productId": "253375",
+    "brand": "Kingston",
+    "priceCLP": 97900,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/253375/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "MSI Spatium S270 480 GB (SPATIUM S270 SATA 2.5)",
+    "productId": "213871",
+    "brand": "MSI",
+    "priceCLP": 67900,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/213871/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green SN3000 1 TB (WDS100T4G0E)",
+    "productId": "361011",
+    "brand": "Western Digital",
+    "priceCLP": 149990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/361011/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "A-DATA XPG Gammix S70 BLADE 1 TB (AGAMMIXS70B-1T-CS)",
+    "productId": "127680",
+    "brand": "A-DATA",
+    "priceCLP": 238990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/127680/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston NV3 500 GB (SNV3SM3/500G)",
+    "productId": "279708",
+    "brand": "Kingston",
+    "priceCLP": 87990,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/279708/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2230)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Kingston NV3 2 TB (SNV3S/2000G)",
+    "productId": "253374",
+    "brand": "Kingston",
+    "priceCLP": 313990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/253374/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Samsung PM9B1 256 GB (MZVL4256HBJD-00BH1)",
+    "productId": "369334",
+    "brand": "Samsung",
+    "priceCLP": 49990,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/369334/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "A-DATA Ultimate SU650 240 GB (ASU650SS-240GT-R)",
+    "productId": "52220",
+    "brand": "A-DATA",
+    "priceCLP": 41900,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/52220/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Legend 710 1 TB (ALEG-710-1TCS)",
+    "productId": "213791",
+    "brand": "A-DATA",
+    "priceCLP": 147990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/213791/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "KingSpec 512 GB (NE-512GB-2280)",
+    "productId": "253891",
+    "brand": "KingSpec",
+    "priceCLP": 89900,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/253891/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston SSDNow A400 480 GB (SA400S37/480G)",
+    "productId": "33675",
+    "brand": "Kingston",
+    "priceCLP": 92900,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/33675/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Ultimate SU650 512 GB (ASU650SS-512GT-R)",
+    "productId": "145307",
+    "brand": "A-DATA",
+    "priceCLP": 77990,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/145307/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston KC3000 2 TB (SKC3000D/2048G)",
+    "productId": "125630",
+    "brand": "Kingston",
+    "priceCLP": 409900,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/125630/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston KC3000 1 TB (SKC3000S/1024G)",
+    "productId": "125632",
+    "brand": "Kingston",
+    "priceCLP": 289900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/125632/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston SSDNow A400 240 GB (SA400S37/240G)",
+    "productId": "33674",
+    "brand": "Kingston",
+    "priceCLP": 61990,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/33674/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston KC600 512 GB (SKC600/512G)",
+    "productId": "68883",
+    "brand": "Kingston",
+    "priceCLP": 179594,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/68883/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade G5 2 TB (SFYR2S/2T0)",
+    "productId": "273866",
+    "brand": "Kingston",
+    "priceCLP": 479990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/273866/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Hiksemi Future 1 TB (HS-SSD-FUTURE CORE 1024G)",
+    "productId": "358406",
+    "brand": "Hiksemi",
+    "priceCLP": 199900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/358406/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Micron 3400 512 GB (MTFDKBA512TFH-1BC1AABYY)",
+    "productId": "414095",
+    "brand": "Micron",
+    "priceCLP": 79990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/414095/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green 1 TB (WDS100T3G0A)",
+    "productId": "134855",
+    "brand": "Western Digital",
+    "priceCLP": 139900,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/134855/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Legend 860 500 GB (SLEG-860-500GCS)",
+    "productId": "266706",
+    "brand": "A-DATA",
+    "priceCLP": 97800,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/266706/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Newgen 500 GB (NT01NV3000-500-E4X)",
+    "productId": "412995",
+    "brand": "Newgen",
+    "priceCLP": 84990,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/412995/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Ultimate SU650 480 GB (ASU650SS-480GT-R)",
+    "productId": "52219",
+    "brand": "A-DATA",
+    "priceCLP": 74990,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/52219/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Legend 960 Max 1 TB (ALEG-960M-1TCS)",
+    "productId": "260522",
+    "brand": "A-DATA",
+    "priceCLP": 227990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/260522/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Legend 860 1 TB (SLEG-860-1000GCS)",
+    "productId": "265615",
+    "brand": "A-DATA",
+    "priceCLP": 169990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/265615/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "A-DATA Ultimate SU650 256 GB (ASU650SS-256GT-R)",
+    "productId": "145308",
+    "brand": "A-DATA",
+    "priceCLP": 46900,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/145308/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Crucial MX500 500 GB (CT500MX500SSD4)",
+    "productId": "44582",
+    "brand": "Crucial",
+    "priceCLP": 69990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/44582/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston KC3000 512 GB (SKC3000S/512G)",
+    "productId": "125633",
+    "brand": "Kingston",
+    "priceCLP": 174990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/125633/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green 500 GB (WDS500G5G0A)",
+    "productId": "361283",
+    "brand": "Western Digital",
+    "priceCLP": 84900,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/361283/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk 5100 Optimus 1 TB (SDSP51100TAN-000E0)",
+    "productId": "402073",
+    "brand": "SanDisk",
+    "priceCLP": 174990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/402073/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Western Digital Blue SA510 500 GB (WDS500G3B0B)",
+    "productId": "145828",
+    "brand": "Western Digital",
+    "priceCLP": 69990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/145828/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Samsung PM9C1b 512 GB (MZVL8512HFLU-00BH1)",
+    "productId": "403586",
+    "brand": "Samsung",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403586/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Crucial BX500 1 TB (CT1000BX500SSD1)",
+    "productId": "77289",
+    "brand": "Crucial",
+    "priceCLP": 169900,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/77289/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston SSDNow UV400 120 GB (SUV400S37/120G)",
+    "productId": "26190",
+    "brand": "Kingston",
+    "priceCLP": 24990,
+    "capacityGb": 120,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/26190/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk SSD Plus 1 TB (SDSSDA3N-1T00-G26)",
+    "productId": "381764",
+    "brand": "SanDisk",
+    "priceCLP": 169990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/381764/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Western Digital Green SN350 250 GB (WDS250G2G0C)",
+    "productId": "223048",
+    "brand": "Western Digital",
+    "priceCLP": 69900,
+    "capacityGb": 250,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/223048/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA XPG Gammix S70 BLADE 2 TB (AGAMMIXS70B-2T-CS)",
+    "productId": "127681",
+    "brand": "A-DATA",
+    "priceCLP": 399990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/127681/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Airflow Green 256 GB (256GB SATA III 2.5)",
+    "productId": "258060",
+    "brand": "Airflow",
+    "priceCLP": 38000,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/258060/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade G5 8 TB (SFYR2D/8T1)",
+    "productId": "368807",
+    "brand": "Kingston",
+    "priceCLP": 1846142,
+    "capacityGb": 8192,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/368807/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SK Hynix 256 GB (HFS256GEJ9X113N)",
+    "productId": "401906",
+    "brand": "SK",
+    "priceCLP": 49990,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/401906/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "SLC"
+    }
+  },
+  {
+    "name": "Crucial BX500 4 TB (CT4000BX500SSD1)",
+    "productId": "252386",
+    "brand": "Crucial",
+    "priceCLP": 369900,
+    "capacityGb": 4096,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/252386/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "KingSpec 256 GB (NX-256GB-2280)",
+    "productId": "308599",
+    "brand": "KingSpec",
+    "priceCLP": 60500,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/308599/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green SN350 2 TB (WDS200T3G0C)",
+    "productId": "126058",
+    "brand": "Western Digital",
+    "priceCLP": 279990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/126058/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Kingston KC3000 4 TB (SKC3000D/4096G)",
+    "productId": "125631",
+    "brand": "Kingston",
+    "priceCLP": 778800,
+    "capacityGb": 4096,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/125631/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Blue 3D NAND 500 GB (WDS500G2B0B)",
+    "productId": "43981",
+    "brand": "Western Digital",
+    "priceCLP": 69990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/43981/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Crucial P3 4 TB (CT4000P3SSD8)",
+    "productId": "149265",
+    "brand": "Crucial",
+    "priceCLP": 539990,
+    "capacityGb": 4096,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/149265/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Kingston NV3 2 TB (SNV3SM3/2T0)",
+    "productId": "279707",
+    "brand": "Kingston",
+    "priceCLP": 266990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/279707/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2230)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Western Digital Green SN350 1 TB (WDS100T2G0C)",
+    "productId": "221924",
+    "brand": "Western Digital",
+    "priceCLP": 169900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/221924/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston KC600 256 GB (SKC600/256G)",
+    "productId": "68884",
+    "brand": "Kingston",
+    "priceCLP": 106980,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/68884/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Legend 710 256 GB (ALEG-710-256GCS)",
+    "productId": "219857",
+    "brand": "A-DATA",
+    "priceCLP": 68280,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/219857/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Samsung PM9C1a 512 GB (MZVL8512HDLU-00BLL)",
+    "productId": "403576",
+    "brand": "Samsung",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403576/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Crucial P310 1 TB (CT1000P310SSD8)",
+    "productId": "256908",
+    "brand": "Crucial",
+    "priceCLP": 179900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/256908/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Western Digital Black SN7100 1 TB (WDS100T4X0E)",
+    "productId": "279805",
+    "brand": "Western Digital",
+    "priceCLP": 224990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/279805/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Black SN850X 2 TB (WDS200T2XHE)",
+    "productId": "152560",
+    "brand": "Western Digital",
+    "priceCLP": 429990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/152560/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Legend 860 2 TB (SLEG-860-2000GCS)",
+    "productId": "265617",
+    "brand": "A-DATA",
+    "priceCLP": 338631,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/265617/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "MSI Spatium M371 500 GB (SPATIUM M371 NVMe M.2 500 GB)",
+    "productId": "358693",
+    "brand": "MSI",
+    "priceCLP": 99900,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/358693/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "TWSC 128 GB (T33420F128)",
+    "productId": "390521",
+    "brand": "TWSC",
+    "priceCLP": 23900,
+    "capacityGb": 128,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/390521/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Lexar NQ780 1 TB (LNQ780X001T-RNNNG)",
+    "productId": "387319",
+    "brand": "Lexar",
+    "priceCLP": 162990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/387319/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Crucial BX500 2 TB (CT2000BX500SSD1)",
+    "productId": "75041",
+    "brand": "Crucial",
+    "priceCLP": 259990,
+    "capacityGb": 2048,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/75041/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Samsung PM9B1 256 GB (MZVL4256HBJD-00BL7)",
+    "productId": "403572",
+    "brand": "Samsung",
+    "priceCLP": 49990,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403572/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "KingSpec P3 2 TB (P3-2TB)",
+    "productId": "361163",
+    "brand": "KingSpec",
+    "priceCLP": 235990,
+    "capacityGb": 2048,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/361163/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC/QLC"
+    }
+  },
+  {
+    "name": "Toshiba Q Pro 128 GB (HDTS312XZSTA)",
+    "productId": "14625",
+    "brand": "Toshiba",
+    "priceCLP": 22990,
+    "capacityGb": 128,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/14625/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston KC600 1 TB (SKC600/1024G)",
+    "productId": "69857",
+    "brand": "Kingston",
+    "priceCLP": 287500,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/69857/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade G5 4 TB (SFYR2S/4T0)",
+    "productId": "273935",
+    "brand": "Kingston",
+    "priceCLP": 940462,
+    "capacityGb": 4096,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/273935/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston DC600M 960 GB (SEDC600M/960G)",
+    "productId": "211873",
+    "brand": "Kingston",
+    "priceCLP": 629990,
+    "capacityGb": 960,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/211873/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Corsair Force MP600 Core XT 4 TB (CSSD-F4000GBMP600CXT)",
+    "productId": "393827",
+    "brand": "Corsair",
+    "priceCLP": 605500,
+    "capacityGb": 4096,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/393827/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade 1 TB (SFYRSK/1000G)",
+    "productId": "157674",
+    "brand": "Kingston",
+    "priceCLP": 342990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/157674/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "KingSpec 512 GB (P3-512GB)",
+    "productId": "236250",
+    "brand": "KingSpec",
+    "priceCLP": 77900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/236250/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston NV3 4 TB (SNV3S/4000G)",
+    "productId": "257282",
+    "brand": "Kingston",
+    "priceCLP": 615990,
+    "capacityGb": 4096,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/257282/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Western Digital Blue SN5100 1 TB (WDS100T5B0E)",
+    "productId": "382017",
+    "brand": "Western Digital",
+    "priceCLP": 189900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/382017/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Crucial E100 480 GB (CT480E100SSD8)",
+    "productId": "265021",
+    "brand": "Crucial",
+    "priceCLP": 94900,
+    "capacityGb": 480,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/265021/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Norvm 512 GB (NS-900-512)",
+    "productId": "400158",
+    "brand": "Norvm",
+    "priceCLP": 72900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/400158/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Samsung PM9C1 1 TB (MZVL81T0HELB-00BH1)",
+    "productId": "403584",
+    "brand": "Samsung",
+    "priceCLP": 165990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403584/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Crucial BX500 500 GB (CT500BX500SSD1)",
+    "productId": "150086",
+    "brand": "Crucial",
+    "priceCLP": 109990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/150086/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Samsung PM9B1 512 GB (MZVL4512HBLU-00BLL)",
+    "productId": "403577",
+    "brand": "Samsung",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403577/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "A-DATA Ultimate SU650 1 TB (ASU650SS-1TT-R)",
+    "productId": "230657",
+    "brand": "A-DATA",
+    "priceCLP": 139900,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/230657/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green SN3000 2 TB (WDS200T4G0E)",
+    "productId": "382018",
+    "brand": "Western Digital",
+    "priceCLP": 329990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/382018/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "A-DATA XPG Mars 980 Pro 1 TB (SMAR-980P-1TCI)",
+    "productId": "278330",
+    "brand": "A-DATA",
+    "priceCLP": 289000,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/278330/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston SSDNow KC300 120 GB (SKC300S3B7A/120G)",
+    "productId": "10497",
+    "brand": "Kingston",
+    "priceCLP": 29990,
+    "capacityGb": 120,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/10497/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hynix 128 GB (HFM128GD3HX015N)",
+    "productId": "279848",
+    "brand": "Hynix",
+    "priceCLP": 26990,
+    "capacityGb": 128,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/279848/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2242)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "KingSpec 128 GB (P3-128)",
+    "productId": "366892",
+    "brand": "KingSpec",
+    "priceCLP": 31800,
+    "capacityGb": 128,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/366892/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston NV3 1 TB (SNV3SM3/1T0)",
+    "productId": "279706",
+    "brand": "Kingston",
+    "priceCLP": 174900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/279706/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2230)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Stylos Tech 120 GB (ST-500)",
+    "productId": "82620",
+    "brand": "Stylos",
+    "priceCLP": 29990,
+    "capacityGb": 120,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/82620/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "A-DATA Legend 710 512 GB (ALEG-710-512GCS)",
+    "productId": "213790",
+    "brand": "A-DATA",
+    "priceCLP": 102505,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/213790/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "KingSpec P3 1 TB (P3-1TB)",
+    "productId": "163547",
+    "brand": "KingSpec",
+    "priceCLP": 139990,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/163547/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC/QLC"
+    }
+  },
+  {
+    "name": "Hynix PC801 512 GB (HFS512GEM9X173N)",
+    "productId": "403580",
+    "brand": "Hynix",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403580/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "KingSpec 512 GB (XF-2280-512GB)",
+    "productId": "403931",
+    "brand": "KingSpec",
+    "priceCLP": 114990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403931/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Copious 512 GB (CPNV3-512)",
+    "productId": "400603",
+    "brand": "Copious",
+    "priceCLP": 85990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/400603/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green SN3000 500 GB (WDS500G4G0E)",
+    "productId": "362977",
+    "brand": "Western Digital",
+    "priceCLP": 97990,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/362977/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Samsung PM9C1 512 GB (MZVL8512HELU-00BH1)",
+    "productId": "369335",
+    "brand": "Samsung",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/369335/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Newgen QS25 512 GB (NWGQS25512)",
+    "productId": "410753",
+    "brand": "Newgen",
+    "priceCLP": 72900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/410753/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade 2 TB (SFYRDK/2000G)",
+    "productId": "157673",
+    "brand": "Kingston",
+    "priceCLP": 622981,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/157673/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Team CX2 256 GB (T253X6256G0C101)",
+    "productId": "123422",
+    "brand": "Team",
+    "priceCLP": 39900,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/123422/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Macrovip 512 GB (MVGLD/512GB)",
+    "productId": "400797",
+    "brand": "Macrovip",
+    "priceCLP": 94900,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/400797/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Micron 1300 256 GB (MTFDDAK256TDL-1AW12ABYY)",
+    "productId": "80539",
+    "brand": "Micron",
+    "priceCLP": 59900,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/80539/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston KC2000 250 GB (SKC2000M8/250G)",
+    "productId": "62011",
+    "brand": "Kingston",
+    "priceCLP": 79900,
+    "capacityGb": 250,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/62011/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Samsung 860 EVO 500 GB (MZ-N6E500BW)",
+    "productId": "44610",
+    "brand": "Samsung",
+    "priceCLP": 79990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/44610/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Samsung 990 EVO Plus 1 TB (MZ-V9S1T0B/AM)",
+    "productId": "271700",
+    "brand": "Samsung",
+    "priceCLP": 295900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/271700/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x2",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston SSDNow A400 960 GB (SA400S37/960G)",
+    "productId": "43025",
+    "brand": "Kingston",
+    "priceCLP": 156990,
+    "capacityGb": 960,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/43025/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Biwin 1 TB (X570)",
+    "productId": "410360",
+    "brand": "Biwin",
+    "priceCLP": 194990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/410360/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SanDisk Ultra 3D 2 TB (SDSSDH3-2T00-G25)",
+    "productId": "40066",
+    "brand": "SanDisk",
+    "priceCLP": 279990,
+    "capacityGb": 2048,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/40066/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Oreton S500 Pro 256 GB (S500 PRO-256)",
+    "productId": "398536",
+    "brand": "Oreton",
+    "priceCLP": 38900,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/398536/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC/QLC"
+    }
+  },
+  {
+    "name": "SanDisk 5100 Optimus 2 TB (SDSP51200TAN-000E0)",
+    "productId": "402074",
+    "brand": "SanDisk",
+    "priceCLP": 329990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/402074/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Team T-Force Vulcan Z 512 GB (T253TZ512G0C101)",
+    "productId": "188300",
+    "brand": "Team",
+    "priceCLP": 67500,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/188300/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Corsair Force MP510 480 GB (CSSD-F480GBMP510B)",
+    "productId": "86799",
+    "brand": "Corsair",
+    "priceCLP": 129900,
+    "capacityGb": 480,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/86799/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green 250 GB (WDS250G5G0A)",
+    "productId": "363645",
+    "brand": "Western Digital",
+    "priceCLP": 64900,
+    "capacityGb": 250,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/363645/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Lexar NQ100 256 GB (LNQ100X256G-RNNNG)",
+    "productId": "359271",
+    "brand": "Lexar",
+    "priceCLP": 51990,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/359271/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hiksemi Future 1 TB (HS-SSD-FUTURES 2230 1024G)",
+    "productId": "245655",
+    "brand": "Hiksemi",
+    "priceCLP": 219990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/245655/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2230)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SanDisk SSD Plus 1 TB (SDSSDA-1T00-G28)",
+    "productId": "384171",
+    "brand": "SanDisk",
+    "priceCLP": 209760,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/384171/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Biwin 1 TB (NV3500)",
+    "productId": "406295",
+    "brand": "Biwin",
+    "priceCLP": 204990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/406295/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Samsung PM881 256 GB (MZ-7LH256A)",
+    "productId": "397785",
+    "brand": "Samsung",
+    "priceCLP": 49900,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/397785/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Team T-Force Vulcan Z 256 GB (T253TZ256G0C101)",
+    "productId": "279544",
+    "brand": "Team",
+    "priceCLP": 59990,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/279544/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Crucial E100 2 TB (CT2000E100SSD8)",
+    "productId": "365045",
+    "brand": "Crucial",
+    "priceCLP": 377990,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/365045/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "KingSpec 1 TB (NX-1TB-2230)",
+    "productId": "400795",
+    "brand": "KingSpec",
+    "priceCLP": 223400,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/400795/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2230)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Maxell 240 GB (348478)",
+    "productId": "92757",
+    "brand": "Maxell",
+    "priceCLP": 49990,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/92757/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Lexar NQ100 512 GB (LNQ100X512G-RNNNG)",
+    "productId": "354863",
+    "brand": "Lexar",
+    "priceCLP": 119990,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/354863/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Toshiba 128 GB (HDTS212XZSWA)",
+    "productId": "11589",
+    "brand": "Toshiba",
+    "priceCLP": 24990,
+    "capacityGb": 128,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/11589/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Acer RE100 256 GB (RE100)",
+    "productId": "406263",
+    "brand": "Acer",
+    "priceCLP": 48990,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/406263/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Western Digital Green SN350 1 TB (WDS100T3G0C)",
+    "productId": "126059",
+    "brand": "Western Digital",
+    "priceCLP": 190590,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/126059/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Maxell 960 GB (348480)",
+    "productId": "90173",
+    "brand": "Maxell",
+    "priceCLP": 129990,
+    "capacityGb": 960,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/90173/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston DC600M 480 GB (SEDC600M/480G)",
+    "productId": "213479",
+    "brand": "Kingston",
+    "priceCLP": 581900,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/213479/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk 8100 Optimus GX Pro 1 TB (SDSP82100TAN-000E0)",
+    "productId": "402076",
+    "brand": "SanDisk",
+    "priceCLP": 429856,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/402076/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green 1 TB (WDS100T5G0A)",
+    "productId": "355828",
+    "brand": "Western Digital",
+    "priceCLP": 145990,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/355828/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Lexar NQ100 1 TB (LNQ100X001T-RNNNG)",
+    "productId": "359272",
+    "brand": "Lexar",
+    "priceCLP": 229990,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/359272/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Lexar NQ780 512 GB (LNQ780X512G-RNNNG)",
+    "productId": "387320",
+    "brand": "Lexar",
+    "priceCLP": 109990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/387320/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Samsung 850 EVO 500 GB (MZ-N5E500BW)",
+    "productId": "30221",
+    "brand": "Samsung",
+    "priceCLP": 79990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/30221/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hynix 256 GB (HFM256GDJTNG)",
+    "productId": "136059",
+    "brand": "Hynix",
+    "priceCLP": 69900,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/136059/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Gugda 512 GB (GS-512)",
+    "productId": "405088",
+    "brand": "Gugda",
+    "priceCLP": 74900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/405088/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hiksemi Wave (P) 512 GB (HS-SSD-WAVE(P)/512G)",
+    "productId": "241165",
+    "brand": "Hiksemi",
+    "priceCLP": 105284,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/241165/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Patriot P210 512 GB (P210S512G25)",
+    "productId": "114017",
+    "brand": "Patriot",
+    "priceCLP": 75900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/114017/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade 4 TB (SFYRDK/4000G)",
+    "productId": "160975",
+    "brand": "Kingston",
+    "priceCLP": 1629990,
+    "capacityGb": 4096,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/160975/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Airflow Green 480 GB (480GB SATA III 2.5)",
+    "productId": "402072",
+    "brand": "Airflow",
+    "priceCLP": 69900,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/402072/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Macrovip 240 GB (MV240GB)",
+    "productId": "407398",
+    "brand": "Macrovip",
+    "priceCLP": 44400,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/407398/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Gugda 256 GB (GS-256)",
+    "productId": "405089",
+    "brand": "Gugda",
+    "priceCLP": 44500,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/405089/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade 2 TB (SFYRD/2000G)",
+    "productId": "126917",
+    "brand": "Kingston",
+    "priceCLP": 599900,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/126917/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green 240 GB (WDS240G3G0A)",
+    "productId": "140975",
+    "brand": "Western Digital",
+    "priceCLP": 83900,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/140975/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Blue SN570 250 GB (WDS250G3B0C)",
+    "productId": "124573",
+    "brand": "Western Digital",
+    "priceCLP": 84900,
+    "capacityGb": 250,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/124573/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SK Hynix BC901 512 GB (HFS512GEJ9X164N)",
+    "productId": "403579",
+    "brand": "SK",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403579/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk 7100 Optimus GX 1 TB (SDSP71100TAN-000E0)",
+    "productId": "407186",
+    "brand": "SanDisk",
+    "priceCLP": 329536,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/407186/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Hiksemi Wave (S) 2 TB (HS-SSD-WAVE(S)/2048G)",
+    "productId": "245351",
+    "brand": "Hiksemi",
+    "priceCLP": 211544,
+    "capacityGb": 2048,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/245351/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "KingSpec 240 GB (P4-240)",
+    "productId": "127260",
+    "brand": "KingSpec",
+    "priceCLP": 58900,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/127260/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kioxia BG6 512 GB (KBG60ZNS512G)",
+    "productId": "273332",
+    "brand": "Kioxia",
+    "priceCLP": 99990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/273332/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2230)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Team GX2 128 GB (T253X2128G0C101)",
+    "productId": "115631",
+    "brand": "Team",
+    "priceCLP": 33900,
+    "capacityGb": 128,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/115631/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SanDisk SSD Plus 500 GB (SDSSDA3N-500G-G26)",
+    "productId": "264776",
+    "brand": "SanDisk",
+    "priceCLP": 137990,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/264776/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Macrovip 1 TB (MV1TB)",
+    "productId": "405788",
+    "brand": "Macrovip",
+    "priceCLP": 144900,
+    "capacityGb": 1024,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/405788/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Patriot P210 256 GB (P210S256G25)",
+    "productId": "109855",
+    "brand": "Patriot",
+    "priceCLP": 48990,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/109855/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green SN350 500 GB (WDS500G2G0C)",
+    "productId": "223177",
+    "brand": "Western Digital",
+    "priceCLP": 129990,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/223177/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SK Hynix BC901 512 GB (HFS512GEJ9X108N)",
+    "productId": "403582",
+    "brand": "SK",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403582/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Maxell 480 GB (348479)",
+    "productId": "92756",
+    "brand": "Maxell",
+    "priceCLP": 89990,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/92756/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hikvision E100N 128 GB (HS-SSD-E100N/128G)",
+    "productId": "114086",
+    "brand": "Hikvision",
+    "priceCLP": 38900,
+    "capacityGb": 128,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/114086/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Stylos Tech 240 GB (ST-500)",
+    "productId": "82618",
+    "brand": "Stylos",
+    "priceCLP": 43990,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/82618/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Western Digital Black SN7100 2 TB (WDS200T4X0E)",
+    "productId": "280769",
+    "brand": "Western Digital",
+    "priceCLP": 599488,
+    "capacityGb": 2048,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/280769/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Synology SNV3410 400 GB (SNV3410-400G)",
+    "productId": "153060",
+    "brand": "Synology",
+    "priceCLP": 209000,
+    "capacityGb": 400,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/153060/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kioxia BG4 3840 GB (KCM5DRUG3T84)",
+    "productId": "407230",
+    "brand": "Kioxia",
+    "priceCLP": 786900,
+    "capacityGb": 3840,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/407230/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "KingSpec 256 GB (P3-256)",
+    "productId": "245891",
+    "brand": "KingSpec",
+    "priceCLP": 46990,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/245891/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SK Hynix 256 GB (HFS256G32TNH)",
+    "productId": "397813",
+    "brand": "SK",
+    "priceCLP": 59900,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/397813/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hiksemi Wave (S) 256 GB (HS-SSD-WAVE(S)/256G)",
+    "productId": "241169",
+    "brand": "Hiksemi",
+    "priceCLP": 89990,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/241169/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk SSD SATA 320 250 GB (SDSS31250GBB-000G0)",
+    "productId": "403229",
+    "brand": "SanDisk",
+    "priceCLP": 99990,
+    "capacityGb": 250,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/403229/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk SSD Plus 500 GB (SDSSDA-500G-G28)",
+    "productId": "380798",
+    "brand": "SanDisk",
+    "priceCLP": 109990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/380798/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Macrovip 512 GB (MV512GB)",
+    "productId": "398802",
+    "brand": "Macrovip",
+    "priceCLP": 85900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/398802/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Team CX2 512 GB (T253X6512G0C101)",
+    "productId": "123423",
+    "brand": "Team",
+    "priceCLP": 99900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/123423/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SanDisk SSD Plus 240 GB (SDSSDA-240G-G26)",
+    "productId": "31164",
+    "brand": "SanDisk",
+    "priceCLP": 79990,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/31164/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Norvm 256 GB (NS-900-256)",
+    "productId": "400534",
+    "brand": "Norvm",
+    "priceCLP": 47324,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/400534/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Biwin 512 GB (NV3500)",
+    "productId": "406294",
+    "brand": "Biwin",
+    "priceCLP": 114990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/406294/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Acer SA100 960 GB (BL.9BWWA.104)",
+    "productId": "106294",
+    "brand": "Acer",
+    "priceCLP": 142990,
+    "capacityGb": 960,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/106294/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk 5100 Optimus 500 GB (SDSP51500GAN-000E0)",
+    "productId": "413917",
+    "brand": "SanDisk",
+    "priceCLP": 124990,
+    "capacityGb": 500,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/413917/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Newgen 2 TB (B0GVMMR61L)",
+    "productId": "410362",
+    "brand": "Newgen",
+    "priceCLP": 246900,
+    "capacityGb": 2048,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/410362/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Advantech 1920 GB (SQF-S25C9-1K9GDSCC)",
+    "productId": "398347",
+    "brand": "Advantech",
+    "priceCLP": 299900,
+    "capacityGb": 1920,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/398347/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston FURY Renegade 1 TB (SFYRS/1000G)",
+    "productId": "127048",
+    "brand": "Kingston",
+    "priceCLP": 549990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/127048/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Hikvision E100N 256 GB (HS-SSD-E100N/256G)",
+    "productId": "118008",
+    "brand": "Hikvision",
+    "priceCLP": 69990,
+    "capacityGb": 256,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/118008/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Oreton S500 Pro 512 GB (S500 PRO-512)",
+    "productId": "398537",
+    "brand": "Oreton",
+    "priceCLP": 78900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/398537/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC/QLC"
+    }
+  },
+  {
+    "name": "Patriot Burst Elite 240 GB (PBE240GS25SSDR)",
+    "productId": "98769",
+    "brand": "Patriot",
+    "priceCLP": 47900,
+    "capacityGb": 240,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/98769/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Samsung PM9E1 4 TB (MZVLC4T0HBL1-00B07)",
+    "productId": "272910",
+    "brand": "Samsung",
+    "priceCLP": 1012000,
+    "capacityGb": 4096,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/272910/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 5.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Sí",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "A-DATA Ultimate SU650 960 GB (ASU650SS-960GT-R)",
+    "productId": "55142",
+    "brand": "A-DATA",
+    "priceCLP": 139500,
+    "capacityGb": 960,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/55142/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Macrovip 480 GB (MV480GB)",
+    "productId": "398801",
+    "brand": "Macrovip",
+    "priceCLP": 84990,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/398801/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Western Digital Blue 512 GB (SDASB8Y-512G-1016)",
+    "productId": "398800",
+    "brand": "Western Digital",
+    "priceCLP": 79900,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/398800/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Patriot Burst Elite 480 GB (PBE480GS25SSDR)",
+    "productId": "98768",
+    "brand": "Patriot",
+    "priceCLP": 84900,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/98768/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston Design-In 128 GB (SNS8154P3/128GJ1)",
+    "productId": "280123",
+    "brand": "Kingston",
+    "priceCLP": 49990,
+    "capacityGb": 128,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/280123/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Biostar S100 120 GB (S100-120)",
+    "productId": "43310",
+    "brand": "Biostar",
+    "priceCLP": 35900,
+    "capacityGb": 120,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/43310/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Newgen 1 TB (1TB QN460)",
+    "productId": "407227",
+    "brand": "Newgen",
+    "priceCLP": 144990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/407227/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Kingston DC600M 1920 GB (SEDC600M/1920G)",
+    "productId": "211934",
+    "brand": "Kingston",
+    "priceCLP": 919990,
+    "capacityGb": 1920,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/211934/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston KC600 2 TB (SKC600/2048G)",
+    "productId": "74574",
+    "brand": "Kingston",
+    "priceCLP": 549990,
+    "capacityGb": 2048,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/74574/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Sí",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "SK Hynix BC711 256 GB (HFM256GD3GX013N / 0KFV6T)",
+    "productId": "137707",
+    "brand": "SK",
+    "priceCLP": 59900,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/137707/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2230)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kston 512 GB (K765-512GB)",
+    "productId": "392276",
+    "brand": "Kston",
+    "priceCLP": 98900,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/392276/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hynix 128 GB (HYX-0CAH19-128-SN312)",
+    "productId": "403780",
+    "brand": "Hynix",
+    "priceCLP": 29990,
+    "capacityGb": 128,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/403780/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Copious 512 GB (CPSA-512GB)",
+    "productId": "400601",
+    "brand": "Copious",
+    "priceCLP": 79990,
+    "capacityGb": 512,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/400601/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Corsair Force MP600 GS 1 TB (CSSD-F1000GBMP600GS)",
+    "productId": "220510",
+    "brand": "Corsair",
+    "priceCLP": 299990,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/220510/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Kingston DC600M 7680 GB (SEDC600M/7680G)",
+    "productId": "213905",
+    "brand": "Kingston",
+    "priceCLP": 4417725,
+    "capacityGb": 7680,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/213905/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hynix PC601 512 GB (HFS512GEM9X169N-EL)",
+    "productId": "403583",
+    "brand": "Hynix",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403583/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Kingston DC600M 3840 GB (SEDC600M/3840G)",
+    "productId": "211874",
+    "brand": "Kingston",
+    "priceCLP": 1949856,
+    "capacityGb": 3840,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/211874/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Stylos Tech 480 GB (STMSSD3B)",
+    "productId": "276783",
+    "brand": "Stylos",
+    "priceCLP": 69990,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/276783/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "SanDisk SSD SATA 320 500 GB (SDSS31500GBB-000G0)",
+    "productId": "403373",
+    "brand": "SanDisk",
+    "priceCLP": 139990,
+    "capacityGb": 500,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/403373/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Green 480 GB (WDS480G3G0A)",
+    "productId": "136354",
+    "brand": "Western Digital",
+    "priceCLP": 102386,
+    "capacityGb": 480,
+    "interface": "SATA",
+    "imageUrl": "https://api.solotodo.com/products/136354/picture/?width=400&height=400",
+    "specs": {
+      "interface": "SATA",
+      "type_name": "SSD",
+      "bus_unicode": "SATA 3 (6.0 Gb/s)",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "QLC"
+    }
+  },
+  {
+    "name": "Corsair MP600 Elite 1 TB (CSSD-F1000GBMP600ECS)",
+    "productId": "234166",
+    "brand": "Corsair",
+    "priceCLP": 399900,
+    "capacityGb": 1024,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/234166/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 4.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Western Digital Ultrastar DC SN540 3840 GB (0TS2353)",
+    "productId": "407229",
+    "brand": "Western Digital",
+    "priceCLP": 820900,
+    "capacityGb": 3840,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/407229/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0",
+      "storage_format": "2.5\"",
+      "dram": "No",
+      "nand": "TLC"
+    }
+  },
+  {
+    "name": "Macrovip 256 GB (MVGLD/256GB)",
+    "productId": "405787",
+    "brand": "Macrovip",
+    "priceCLP": 62990,
+    "capacityGb": 256,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/405787/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "No",
+      "nand": "Desconocido"
+    }
+  },
+  {
+    "name": "Hynix PC711 512 GB (HFS512GD9TNI-L2B0B (clone))",
+    "productId": "403585",
+    "brand": "Hynix",
+    "priceCLP": 89990,
+    "capacityGb": 512,
+    "interface": "NVMe",
+    "imageUrl": "https://api.solotodo.com/products/403585/picture/?width=400&height=400",
+    "specs": {
+      "interface": "NVMe",
+      "type_name": "SSD",
+      "bus_unicode": "PCIe 3.0 x4",
+      "storage_format": "M.2 (2280)",
+      "dram": "Desconocido",
+      "nand": "Desconocido"
+    }
+  }
+]
